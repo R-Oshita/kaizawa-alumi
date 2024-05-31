@@ -4,24 +4,8 @@ Template Name: トップページ
 */
 get_header(); ?>
     <div class="fv-wrap text-center">
-      <div class="splide mainslider">
-        <div class="splide__track">
-          <ul class="splide__list">
-            <li class="splide__slide fv-1" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/top/fv-bg1.jpg);">
-              <div class="fv-copy text-gray">
-                <p class="fv-title">ウエブル基本テーマ</p>
-                <p class="fv-desc">コーポレートサイト・採用サイト・学校サイト<br class="d-sm-none">からオウンドメディアまで<br>様々なWebサイトを制作します。</p>
-              </div>
-            </li>
-            <li class="splide__slide fv-2" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/top/fv-bg2.jpg);">
-              <div class="fv-copy text-white">
-                <p class="fv-title">ウエブル基本テーマ</p>
-                <p class="fv-desc">コーポレートサイト・採用サイト・学校サイト<br class="d-sm-none">からオウンドメディアまで<br>様々なWebサイトを制作します。</p>
-              </div>
-            </li>
-          </ul>
-        </div><!-- //splide__track -->
-      </div><!-- //splide -->
+<div class="fv-imgbox"></div>
+<div class="fv-bg-blue"></div>
     </div>
       <section class="py-5">
         <div class="container py-lg-4">

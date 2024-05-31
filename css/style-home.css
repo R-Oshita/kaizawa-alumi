@@ -2,8 +2,9 @@
 /* スライダー */
 .fv-wrap {
   overflow: hidden;
-  height: calc(100svh - 42.5px);/* CSS変数をサポートしていないブラウザ用。"- 42.5px"はヘッダーの高さ。ファーストビューの上にヘッダー分の余白を設けない場合は引き算の必要なし。 */
+  height: 95svh;
   min-height: 300px;
+
 }
 .mainslider, .fv-wrap .splide__track {
     height: 100%;
@@ -38,9 +39,7 @@
 @media all and (min-width: 768px) {
 }
 @media all and (min-width: 992px) {
-  .fv-wrap {
-    height: calc(100svh - 97px);/* "- 97px"はヘッダーの高さ */
-  }
+
 }
 @media all and (min-width: 1200px) {
 }

@@ -25,7 +25,7 @@
               <div class="footer-content-menu">
                 <?php 
                     $args = array(
-                      'menu' => 'g-menu',
+                      'menu' => 'footer-menu',
                       'container' => false,
                       'menu_class' => 'menu_class footer-nav ps-0 mb-0',
                     );
