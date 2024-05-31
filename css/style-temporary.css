@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/* コンポーネント１の記述 */
+
+@media all and (min-width: 576px) {
+}
+@media all and (min-width: 768px) {
+}
+@media all and (min-width: 992px) {
+}
+@media all and (min-width: 1200px) {
+}
+@media all and (min-width: 1400px) {
+}
+/* //コンポーネント１の記述 */
+
+/* コンポーネント２の記述 */
+
+@media all and (min-width: 576px) {
+}
+@media all and (min-width: 768px) {
+}
+@media all and (min-width: 992px) {
+}
+@media all and (min-width: 1200px) {
+}
+@media all and (min-width: 1400px) {
+}
+/* //コンポーネント２の記述 */
+
+
+/* セクション１の記述 */
+
+@media all and (min-width: 576px) {
+}
+@media all and (min-width: 768px) {
+}
+@media all and (min-width: 992px) {
+}
+@media all and (min-width: 1200px) {
+}
+@media all and (min-width: 1400px) {
+}
+/* //セクション１の記述 */
+
+/* セクション２の記述 */
+
+@media all and (min-width: 576px) {
+}
+@media all and (min-width: 768px) {
+}
+@media all and (min-width: 992px) {
+}
+@media all and (min-width: 1200px) {
+}
+@media all and (min-width: 1400px) {
+}
+/* //セクション２の記述 */
+
+/* セクション３の記述 */
+
+@media all and (min-width: 576px) {
+}
+@media all and (min-width: 768px) {
+}
+@media all and (min-width: 992px) {
+}
+@media all and (min-width: 1200px) {
+}
+@media all and (min-width: 1400px) {
+}
+/* //セクション３の記述 */
+
+
+/*デスクトップ*/
+@media all and (min-width: 992px) and (max-width: 1199px) {
+}
+/*中デバイス*/
+@media all and (min-width: 768px) and (max-width: 991px) {
+  
+}
+/*小デバイス*/
+@media all and (min-width: 576px) and (max-width: 767px) {
+}
+
+@media all and (max-width: 400px) {
+}
+/*iPhone5:SE*/
+@media all and (max-width: 320px) {
+
+}

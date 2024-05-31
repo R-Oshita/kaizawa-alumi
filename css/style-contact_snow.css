@@ -1,0 +1,242 @@
+/* お問い合わせ上部の文言 */
+.contact-message {
+  text-align: center;
+  letter-spacing: .1em;
+  line-height: calc(28 / 16);
+  margin-bottom: 2rem;
+}
+.snow-monkey-form[data-screen="input"] .confirm-message,
+.snow-monkey-form[data-screen="back"] .confirm-message {
+  display: none;/* 入力画面・確認画面から戻ってきた画面では非表示 */
+}
+.snow-monkey-form[data-screen="confirm"] .input-message {
+  display: none;/* 確認画面では非表示 */
+}
+.contact-tel-wrap {
+  margin-bottom: 2rem;
+}
+@media all and (min-width: 576px) {
+}
+@media all and (min-width: 768px) {
+}
+@media all and (min-width: 992px) {
+}
+@media all and (min-width: 1200px) {
+}
+@media all and (min-width: 1400px) {
+}
+/* //お問い合わせ上部の文言 */
+
+/* 電話番号 */
+.contact-tel-wrap {
+  text-align: center;
+}
+.contact-tel-num {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.contact-tel-num, .contact-tel-num:hover {
+  color: #00b5c0;
+}
+.contact-tel-num_inner {
+  display: inline-block;
+  position: relative;
+  padding-left: 1.75rem;
+}
+.contact-tel-num_inner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: url(../images/common/icon-tel_hascolor.svg) no-repeat center center/contain;
+}
+.contact-tel-time {
+  display: block;
+}
+@media all and (min-width: 576px) {
+}
+@media all and (min-width: 768px) {
+}
+@media all and (min-width: 992px) {
+  .contact-tel-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-tel-num {
+    pointer-events: none; 
+  }
+  .contact-tel-time {
+    display: inline-block;
+    padding-left: 1.25rem;
+  }
+}
+@media all and (min-width: 1200px) {
+}
+@media all and (min-width: 1400px) {
+}
+/* //電話番号 */
+
+/* プログレストラッカー */
+.contact-stat-list {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  text-align: center;
+  background-color: #E7E7E7;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+.contact-stat-item {
+  font-weight: 700;
+  color: #656565;
+  position: relative;
+}
+.contact-stat-item:not(:last-child) {
+  padding-right: 2rem;
+}
+.contact-stat-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  right: 14px;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #656565;
+  border-right: 1px solid #656565;
+}
+.snow-monkey-form[data-screen="input"] .contact-stat-item:first-child,
+.snow-monkey-form[data-screen="back"] .contact-stat-item:first-child,
+.snow-monkey-form[data-screen="confirm"] .contact-stat-item:nth-child(2),
+.contact-form-area_finish .contact-stat-item:nth-child(3) {
+  color: #333;/* カレント表示 */
+  font-size: 1.176em;
+}
+.contact-stat-num {
+  font-size: 1.25em;
+}
+@media all and (min-width: 576px) {
+  .contact-stat-item {
+    letter-spacing: .1em;
+  }
+}
+@media all and (min-width: 768px) {
+}
+@media all and (min-width: 992px) {
+  .contact-stat-list {
+    font-size: 1.06rem;
+  }
+  .contact-stat-item:not(:last-child) {
+    padding-right: 4rem;
+  }
+  .contact-stat-item:not(:last-child)::after {
+    right: 31px;
+    width: 13px;
+    height: 13px;
+  }
+}
+@media all and (min-width: 1200px) {
+}
+@media all and (min-width: 1400px) {
+}
+/* //プログレストラッカー */
+
+/* フォーム部分 */
+.smf-item__label {
+  position: relative;
+  padding-left: 60px;
+}
+.sme-badge {/* 「必須」「任意」を絶対配置にする */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.smf-item__label__text {
+  font-weight: 700;
+}
+.smf-form .smf-item .smf-checkbox-control,
+.smf-form .smf-item .smf-radio-button-control {/* チェックボックスとラジオボタン微調整 */
+  align-items: center;
+  row-gap: 12px;
+}
+.smf-form .smf-item .smf-checkbox-control__control,
+.smf-form .smf-item .smf-radio-button-control__control {/* チェックボックスとラジオボタン微調整 */
+  margin-top: 0;
+}
+.smf-form .smf-item .smf-select-control__control {/* セレクトボックスがテキストと高さが揃っていないので揃える */
+  padding: 13px 30px 13px 9px;
+}
+.snow-monkey-form[data-screen="confirm"] .postal-search-btn-wrap {/* 確認画面では住所検索ボタン非表示 */
+  display: none;
+}
+@media all and (min-width: 576px) {
+  .zip-box .smf-item__controls {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .zip-box .wp-block-button__link {
+    margin: 0;
+  }
+}
+@media all and (min-width: 768px) {
+}
+@media all and (min-width: 992px) {
+  .form-input-item {/* クラス「form-input-item」を付けた要素は２カラムに（フォーム上部の要素が２カラムにならないようにするために専用のクラスを用意） */
+    display: flex;
+    align-items: baseline;
+  }
+  .form-input-item .smf-item__col--label {
+    width: 280px;
+    padding-right: 2.5rem;
+  }
+  .form-input-item .smf-item__col--controls {
+    width: calc(100% - 280px);
+  }
+}
+@media all and (min-width: 1200px) {
+}
+@media all and (min-width: 1400px) {
+}
+/* //フォーム部分 */
+
+/* ボタンデザイン */
+.smf-button-control__control[data-action="confirm"],
+.smf-button-control__control[data-action="complete"],
+.smf-button-control__control[data-action="back"] {
+  color: #fff;
+  background-image: none;
+  font-weight: 700;
+  border: none;
+  transition: .3s;
+  height: 50px;
+}
+.smf-button-control__control[data-action="confirm"],
+.smf-button-control__control[data-action="complete"] {/* 確認・送信ボタン */
+  background-color: #333;
+  width: 280px;
+  max-width: 60%;
+}
+.smf-button-control__control[data-action="back"] {/* 戻るボタン */
+  background-color: #adadad;
+  width: 100px;
+  max-width: 30%;
+}
+.smf-button-control__control:hover {
+  opacity: .7;
+}
+@media all and (min-width: 576px) {
+}
+@media all and (min-width: 768px) {
+}
+@media all and (min-width: 992px) {
+
+}
+@media all and (min-width: 1200px) {
+}
+@media all and (min-width: 1400px) {
+}
+/* //ボタンデザイン */

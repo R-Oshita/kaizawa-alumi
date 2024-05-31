@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* スライダー */
+.fv-wrap {
+  overflow: hidden;
+  height: calc(100svh - 42.5px);/* CSS変数をサポートしていないブラウザ用。"- 42.5px"はヘッダーの高さ。ファーストビューの上にヘッダー分の余白を設けない場合は引き算の必要なし。 */
+  min-height: 300px;
+}
+.mainslider, .fv-wrap .splide__track {
+    height: 100%;
+}
+.splide__slide {
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.fv-copy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+.fv-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.fv-desc {
+  font-size: 1rem;
+}
+@media all and (min-width: 576px) {
+}
+
+@media all and (min-width: 768px) {
+}
+@media all and (min-width: 992px) {
+  .fv-wrap {
+    height: calc(100svh - 97px);/* "- 97px"はヘッダーの高さ */
+  }
+}
+@media all and (min-width: 1200px) {
+}
+/* //スライダー */
