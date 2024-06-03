@@ -49,7 +49,7 @@ ul {
   --bg-lightblue: #f0f8ff;
 }
 
-.text-blue{
+.text-blue {
   color: var(--base-blue);
 }
 
@@ -69,6 +69,10 @@ main {
 /* //mainタグ上の余白 */
 
 /* フォントファミリー */
+.yugothic {
+  font-family: YuGothic, 'Yu Gothic', 'Hiragino Sans', 'Hiragino Kaku Gothic Pro', Meiryo, Osaka, MS PGothic, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 .josefin {
   font-family: "Josefin Sans", sans-serif;
 }
@@ -124,6 +128,63 @@ main {
 
 /* //両端揃え */
 
+/* ボタン */
+.button-pattern1 {
+  background-color: var(--base-blue);
+  color: #fff;
+  position: relative;
+}
+
+.button-arrow-box {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button-arrow {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.button-arrow::before,
+.button-arrow::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  content: "";
+  vertical-align: middle;
+}
+
+.button-arrow::before {
+  display: block;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.button-arrow::after {
+  display: block;
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid var(--base-blue);
+  border-right: 1px solid var(--base-blue);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* //ボタン */
+
 /* 文頭の記号 */
 .before-dot, .before-asterisk {
   position: relative;
@@ -160,6 +221,8 @@ main {
 }
 
 /* //背景色 */
+
+
 
 /* 下層FV */
 .head-ttl-wrap {
@@ -651,17 +714,23 @@ a.three-pr-inner:hover {
 /* //3PRエリア */
 
 /* CTAエリア */
+.cta-section .top-ttl,
+.cta-section .top-subttl {
+  color: #fff;
+}
+
 .cta-section {
-  background-color: #ddd;
+  background-image: url(../images/top/cta-bg.jpg);
+  background-size: cover;
 }
 
 .cta-box {
-  background-color: #fff;
+  color: #fff;
   text-align: center;
 }
 
 .cta-catchcopy {
-  font-size: 1.4rem;
+  font-size: 0.75rem;
   font-weight: 700;
   margin-bottom: 1.2rem;
 }
@@ -688,23 +757,6 @@ a.three-pr-inner:hover {
   box-shadow: 0 0 10px rgb(0 0 0 / 40%);
 }
 
-.cta-contact-btn_inner {
-  position: relative;
-  padding-left: 35px;
-}
-
-.cta-contact-btn_inner::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  left: 0;
-  width: 24px;
-  height: 100%;
-  background: url(../images/common/icon-mail.svg) no-repeat center center/contain;
-}
-
 .tel-num-before {
   font-size: 1.06rem;
   font-weight: 700;
@@ -724,18 +776,11 @@ a.three-pr-inner:hover {
 .cta-tel-btn_inner {
   padding-left: 20px;
   position: relative;
+  color: #fff;
 }
 
-.cta-tel-btn_inner::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  left: 0;
-  width: 15px;
-  height: 100%;
-  background: url(../images/common/icon-tel.svg) no-repeat center center/contain;
+.cta-contact .button-pattern1{
+  
 }
 
 @media all and (min-width: 576px) {}
@@ -744,6 +789,10 @@ a.three-pr-inner:hover {
   .cta-tel-btn {
     font-size: 1.25rem;
     pointer-events: none;
+  }
+
+  .cta-catchcopy {
+    font-size: 1.125rem;
   }
 }
 
@@ -786,18 +835,39 @@ a.three-pr-inner:hover {
 /* //記事関係共通パーツ */
 /* 記事一覧（サムネ無しリスト形式） */
 .postlist-simple {
-  width: 850px;
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
 
 .postlist-simple-items {
-  border-top: 1px solid #999;
+  position: relative;
 }
 
-.postlist-simple-items:last-child {
-  border-bottom: 1px solid #999;
+.postlist-simple-items::before,
+.postlist-simple-items::after {
+  content: "";
+  width: 6px;
+  height: 1px;
+  display: inline-block;
+  border-radius: 2px;
+  background: var(--base-blue);
+  position: absolute;
+  right: 10px;
+}
+
+.postlist-simple-items::before {
+  top: calc(50% - 5px);
+  transform: rotate(45deg);
+}
+
+.postlist-simple-items::after {
+  bottom: calc(50% - 0px);
+  transform: rotate(-45deg);
+}
+
+.postlist-simple-items {
+  border-bottom: 1px solid var(--base-gray);
 }
 
 .postlist-simple-inner {
@@ -808,14 +878,9 @@ a.three-pr-inner:hover {
 
 .postlist-simple-date {
   font-size: 1.06rem;
-  font-weight: 700;
+  font-weight: 500;
   padding-right: 15px;
   color: #333;
-}
-
-.postlist-simple-ttl {
-  width: 100%;
-  padding-top: 8px;
 }
 
 @media all and (min-width: 768px) {

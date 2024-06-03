@@ -26,11 +26,11 @@ header {
 }
 
 .logo-wrap {
-  padding: 7px 15px;
+  padding: 3px 15px;
 }
 
 .logo-wrap img {
-  width: 120px;
+  width: 140px;
   transition: .3s;
 }
 
@@ -938,12 +938,12 @@ footer .accordionBtn {
 /* //フッター */
 
 /* フッターの下に余白ができないように */
-body {
+/* body {
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
-}
+} */
 
 .header-and-main {
   width: 100%;

@@ -3,556 +3,224 @@
 Template Name: トップページ
 */
 get_header(); ?>
-    <div class="fv-wrap text-center">
-<div class="fv-imgbox"></div>
-<div class="fv-bg-blue"></div>
+<section class="fv">
+  <div class="fv-container">
+    <div class="fv-bg"></div>
+    <div class="fv-imgbox">
+
+      <picture>
+        <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/fv.webp" type="image/webp">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/fv.jpg" alt="" class="" width="1820" height="950">
+      </picture>
+      <div class="container">
+        <div class="fv-txtbox">
+          <p class="fv-txt1 josefin">An enterprise that embraces people and communities,<br>
+            growing together with people.</p>
+          <p class="fv-txt2 fw-600">
+            人と地域に寄り添い<br>
+            人とともに成長する企業へ
+          </p>
+        </div>
+      </div>
     </div>
-      <section class="py-5">
-        <div class="container py-lg-4">
-          <div class="mb-4">
-            <h2 class="ttl-pattern_1">NEWS</h2>
-            <div class="subttl text-center">簡易的な記事一覧（サムネ無しリスト形式）</div>
-          </div>
-          <!-- ↓日付～見出しまで全部記事へのリンクのver↓ -->
-          <ul class="postlist-simple">
+
+
+    <div class="scrolldown1">
+      <p class="scrolldown1-txt fw-600">SCROLL</p><span></span>
+    </div>
+  </div>
+  </div>
+
+
+</section>
+<section class="py-5">
+  <div class="container py-lg-4 news-container">
+    <div class="mb-4 ttx-box">
+      <h2 class="top-ttl josefin">NEWS</h2>
+      <div class="top-subttl">新着情報</div>
+    </div>
+    <!-- ↓日付～見出しまで全部記事へのリンクのver↓ -->
+    <ul class="postlist-simple">
+      <?php
+      $args = array(
+        'posts_per_page' => 3,
+        'post_type' => array('post'),
+      );
+      $wp_query_post = new WP_Query($args);
+      if ($wp_query_post->have_posts()) : while ($wp_query_post->have_posts()) : $wp_query_post->the_post();
+      ?>
+          <li class="postlist-simple-items">
+            <a href="<?php the_permalink(); ?>" class="postlist-simple-inner">
+              <span class="postlist-simple-date"><?php the_time('Y.m.d'); ?></span>
+
+              <span class="postlist-simple-ttl">
+                <?php
+                if (mb_strlen($post->post_title) > 30) {
+                  $title = mb_substr($post->post_title, 0, 30);
+                  echo $title . '...';
+                } else {
+                  echo $post->post_title;
+                }
+                ?>
+              </span>
+            </a>
+          </li>
+        <?php endwhile;
+      else : ?>
+      <?php endif; ?>
+      <?php wp_reset_postdata(); ?>
+    </ul>
+    <!--  ↑日付～見出しまで全部記事へのリンクのver↑ -->
+    <!-- ↓カテゴリはカテゴリへのリンクにしたver↓ -->
+    <!--<ul class="postlist-simple">
             <?php
-              $args = array(
-                'posts_per_page' => 3,
-                'post_type' => array('post'),
-              );
-              $wp_query_post = new WP_Query($args);
-              if ($wp_query_post->have_posts()): while($wp_query_post->have_posts()): $wp_query_post->the_post();
-            ?>
-            <li class="postlist-simple-items">
-              <a href="<?php the_permalink(); ?>" class="postlist-simple-inner">
-                <span class="postlist-simple-date"><?php the_time('Y.m.d（D）'); ?></span>
-                <span class="post-cat-wrap">
-                  <?php 
-                    $id         = get_the_ID(); //現在の投稿のID（数値）を取得
-                    $term_array = get_the_terms( $id, 'category' );  //投稿に割り当てられたタクソノミーのターム（カスタム分類の項目）を取得
-                    if (!is_array($term_array)) {
-                       $term_array = array(array('title'=>''));
-                    } else {
-                       foreach ( $term_array as $term ) {
-                           $term_name = esc_html($term->name);
-                           $term_slug = $term -> slug;
-                           echo ('<span class="cat-label ') ;
-                           echo esc_html($term_slug) ;
-                           echo ('">') ;
-                           echo esc_html($term->name)  ;
-                           echo ('</span>') ;
-                       }
-                    }
-                  ?>
-                </span>
-                <span class="postlist-simple-ttl">
-                  <?php
-                    if(mb_strlen($post->post_title)>30) {
-                      $title= mb_substr($post->post_title,0,30) ;
-                        echo $title . '...';
-                    } else {
-                        echo $post->post_title;
-                    }
-                  ?>
-                </span>
-              </a>
-            </li>
-            <?php endwhile; else: ?>                   
-            <?php endif; ?>
-            <?php wp_reset_postdata(); ?>
-          </ul>
-          <!--  ↑日付～見出しまで全部記事へのリンクのver↑ -->
-          <!-- ↓カテゴリはカテゴリへのリンクにしたver↓ -->
-          <!--<ul class="postlist-simple">
-            <?php
-              $args = array(
-                'posts_per_page' => 3,
-                'post_type' => array('post'),
-              );
-              $wp_query_post = new WP_Query($args);
-              if ($wp_query_post->have_posts()): while($wp_query_post->have_posts()): $wp_query_post->the_post();
+            $args = array(
+              'posts_per_page' => 3,
+              'post_type' => array('post'),
+            );
+            $wp_query_post = new WP_Query($args);
+            if ($wp_query_post->have_posts()) : while ($wp_query_post->have_posts()) : $wp_query_post->the_post();
             ?>
             <li class="postlist-simple-items">
               <span class="postlist-simple-inner">
                 <span class="postlist-simple-date"><?php the_time('Y.m.d（D）'); ?></span>
                 <span class="post-cat-wrap">
-                  <?php 
-                    $id         = get_the_ID(); //現在の投稿のID（数値）を取得
-                    $term_array = get_the_terms( $id, 'category' );  //投稿に割り当てられたタクソノミーのターム（カスタム分類の項目）を取得
-                    if (!is_array($term_array)) {
-                       $term_array = array(array('title'=>''));
-                    } else {
-                       foreach ( $term_array as $term ) {
-                        $term_link = get_term_link( $term );
-                           $term_name = esc_html($term->name);
-                           $term_slug = $term -> slug;
-                           echo '<a href="'.esc_url( $term_link ).'">';
-                           echo ('<span class="cat-label ') ;
-                           echo esc_html($term_slug) ;
-                           echo ('">') ;
-                           echo esc_html($term->name)  ;
-                           echo ('</span></a>') ;
-                       }
+                  <?php
+                  $id         = get_the_ID(); //現在の投稿のID（数値）を取得
+                  $term_array = get_the_terms($id, 'category');  //投稿に割り当てられたタクソノミーのターム（カスタム分類の項目）を取得
+                  if (!is_array($term_array)) {
+                    $term_array = array(array('title' => ''));
+                  } else {
+                    foreach ($term_array as $term) {
+                      $term_link = get_term_link($term);
+                      $term_name = esc_html($term->name);
+                      $term_slug = $term->slug;
+                      echo '<a href="' . esc_url($term_link) . '">';
+                      echo ('<span class="cat-label ');
+                      echo esc_html($term_slug);
+                      echo ('">');
+                      echo esc_html($term->name);
+                      echo ('</span></a>');
                     }
+                  }
                   ?>
                 </span>
                 <a href="<?php the_permalink(); ?>">
                   <span class="postlist-simple-ttl">
                     <?php
-                      if(mb_strlen($post->post_title)>30) {
-                        $title= mb_substr($post->post_title,0,30) ;
-                          echo $title . '...';
-                      } else {
-                          echo $post->post_title;
-                      }
+                    if (mb_strlen($post->post_title) > 30) {
+                      $title = mb_substr($post->post_title, 0, 30);
+                      echo $title . '...';
+                    } else {
+                      echo $post->post_title;
+                    }
                     ?>
                   </span>
                 </a>
               </span>
             </li>
-            <?php endwhile; else: ?>                   
+            <?php endwhile;
+            else : ?>                   
             <?php endif; ?>
             <?php wp_reset_postdata(); ?>
           </ul>-->
-          <!--  ↑カテゴリはカテゴリへのリンクにしたver↑ -->
-          <div class="pt-md-4 text-center">
-            <a href="<?php echo esc_url( home_url() ); ?>/news/" class="btn-standard btn-size300">一覧へ</a>
-          </div>
-        </div><!-- //container -->
-      </section>
-      <section class="py-5 bg-lightgray">
-        <div class="container py-lg-4">
-          <div class="mb-4">
-            <h2 class="ttl-pattern_1">NEWS</h2>
-            <div class="subttl text-center">サムネ有りリスト形式</div>
-          </div>
-          <!--  ↓全部記事へのリンクのver↓ -->
-          <ul class="postlist-line">
-          <?php
-              $args = array(
-                'posts_per_page' => 3,
-                'post_type' => array('post'),
-              );
-              $wp_query_post = new WP_Query($args);
-              if ($wp_query_post->have_posts()): while($wp_query_post->have_posts()): $wp_query_post->the_post();
-            ?>
-            <li class="postlist-line-items">
-              <a href="<?php the_permalink(); ?>" class="postlist-line-inner">
-                <div class="postlist-line-thumbwrap">
-                  <?php
-                    if (has_post_thumbnail()) {
-                      the_post_thumbnail('thumb-200200');
-                    }else {
-                      echo '<img src="'. get_template_directory_uri() .'/images/common/NoImage200.png" alt="NoImage" width="200" height="200" loading="lazy">';
-                    }
-                  ?>
-                </div>
-                <div class="postlist-line-textwrap">
-                  <div class="d-block d-sm-flex justify-content-between mb-2">
-                    <div class="postlist-line-date"><?php the_time('Y.m.d（D）'); ?></div>
-                    <div class="post-cat-wrap">
-                      <?php 
-                        $id         = get_the_ID(); //現在の投稿のID（数値）を取得
-                        $term_array = get_the_terms( $id, 'category' );  //投稿に割り当てられたタクソノミーのターム（カスタム分類の項目）を取得
-                        if (!is_array($term_array)) {
-                           $term_array = array(array('title'=>''));
-                        } else {
-                           foreach ( $term_array as $term ) {
-                               $term_name = esc_html($term->name);
-                               $term_slug = $term -> slug;
-                               echo ('<span class="cat-label ') ;
-                               echo esc_html($term_slug) ;
-                               echo ('">') ;
-                               echo esc_html($term->name)  ;
-                               echo ('</span>') ;
-                           }
-                        }
-                      ?>
-                    </div>
-                  </div>
-                  <div class="postlist-line-ttl pb-2"><?php the_title(); ?></div>
-                  <div class="postlist-line-excerpt d-none d-sm-block">
-                    <?php
-                      $str = get_the_excerpt();
-                      echo na_trim_words($str,60);
-                    ?>
-                  </div>
-                </div>
-                <p class="postlist-line-excerpt_sp d-sm-none">
-                  <?php
-                    $str = get_the_excerpt();
-                    echo na_trim_words($str,60);
-                  ?>
-                </p>
-              </a>
-            </li>
-            <?php endwhile; else: ?>
-            <li>記事がありません。</li>
-            <?php endif; ?>
-            <?php wp_reset_postdata(); ?>
-          </ul>
-          <!--  ↑全部記事へのリンクのver↑ -->
-          <!--  ↓各要素にリンクを指定したver↓ --><!--
-          <ul class="postlist-line">
-          <?php
-              $args = array(
-                'posts_per_page' => 3,
-                'post_type' => array('post'),
-              );
-              $wp_query_post = new WP_Query($args);
-              if ($wp_query_post->have_posts()): while($wp_query_post->have_posts()): $wp_query_post->the_post();
-            ?>
-            <li class="postlist-line-items">
-              <span class="postlist-line-inner">
-                <div class="postlist-line-thumbwrap">
-                  <a href="<?php the_permalink(); ?>">
-                    <?php
-                      if (has_post_thumbnail()) {
-                        the_post_thumbnail('thumb-200200');
-                      }else {
-                        echo '<img src="'. get_template_directory_uri() .'/images/common/NoImage200.png" alt="NoImage" width="200" height="200" loading="lazy">';
-                      }
-                    ?>
-                  </a>
-                </div>
-                <div class="postlist-line-textwrap">
-                  <div class="d-block d-sm-flex justify-content-between mb-2">
-                    <div class="postlist-line-date"><?php the_time('Y.m.d（D）'); ?></div>
-                    <div class="post-cat-wrap">
-                      <?php 
-                        $id         = get_the_ID(); //現在の投稿のID（数値）を取得
-                        $term_array = get_the_terms( $id, 'category' );  //投稿に割り当てられたタクソノミーのターム（カスタム分類の項目）を取得
-                        if (!is_array($term_array)) {
-                           $term_array = array(array('title'=>''));
-                        } else {
-                          foreach ( $term_array as $term ) {
-                           $term_link = get_term_link( $term );
-                              $term_name = esc_html($term->name);
-                              $term_slug = $term -> slug;
-                              echo '<a href="'.esc_url( $term_link ).'">';
-                              echo ('<span class="cat-label ') ;
-                              echo esc_html($term_slug) ;
-                              echo ('">') ;
-                              echo esc_html($term->name)  ;
-                              echo ('</span></a>') ;
-                          }
-                        }
-                      ?>
-                    </div>
-                  </div>
-                  <a href="<?php the_permalink(); ?>">
-                    <div class="postlist-line-ttl pb-2"><?php the_title(); ?></div>
-                    <div class="postlist-line-excerpt d-none d-sm-block">
-                      <?php
-                        $str = get_the_excerpt();
-                        echo na_trim_words($str,60);
-                      ?>
-                    </div>
-                  </a>
-                </div>
-                <p class="postlist-line-excerpt_sp d-sm-none">
-                  <a href="<?php the_permalink(); ?>">
-                    <?php
-                      $str = get_the_excerpt();
-                      echo na_trim_words($str,60);
-                    ?>
-                  </a>
-                </p>
-              </a>
-            </li>
-            <?php endwhile; else: ?>
-            <li>記事がありません。</li>
-            <?php endif; ?>
-            <?php wp_reset_postdata(); ?>
-          </ul>-->
-          <!--  ↑各要素にリンクを指定したver↑ -->
-          <div class="pt-4 text-center">
-            <a href="<?php echo esc_url( home_url() ); ?>/news/" class="btn-standard btn-size300">一覧へ</a>
-          </div>
-        </div><!-- //container -->
-      </section>
-      <section class="py-5">
-        <div class="container py-lg-4">
-          <div class="mb-4">
-            <h2 class="ttl-pattern_1">EVENT</h2>
-            <div class="subttl text-center">イベント情報の掲載等におすすめのカード形式</div>
-          </div>
-          <!-- ↓カード全体に記事リンク↓ -->
-          <div class="row px-2 px-lg-0 postlist-card-list">
-            <?php
-              $args = array(
-                'paged' => $paged,
-                'posts_per_page' => 4,
-                'post_type' => array('event'),
-              );
-              $wp_query_post = new WP_Query($args);
-              if ($wp_query_post->have_posts()): while($wp_query_post->have_posts()): $wp_query_post->the_post();
-            ?>
-            <div class="col-12 col-sm-6 col-lg-3 px-2 px-lg-3 postlist-card-item">
-              <a href="<?php the_permalink(); ?>" class="postlist-card-inner">
-                <div class="postlist-card-thumbwrap">
-                  <?php
-                    if (has_post_thumbnail()) {
-                      the_post_thumbnail('thumb-topblog');
-                    }else {
-                      echo '<img src="'. get_template_directory_uri() .'/images/common/NoImage.png" alt="NoImage" width="700" height="450" loading="lazy">';
-                    }
-                  ?>
-                </div>
-                <div class="post-cat-wrap mt-2 mb-1">
-                  <?php 
-                    $id         = get_the_ID(); //現在の投稿のID（数値）を取得
-                    $term_array = get_the_terms( $id, 'event_taxonomy' );  //投稿に割り当てられたタクソノミーのターム（カスタム分類の項目）を取得
-                    if (!is_array($term_array)) {
-                       $term_array = array(array('title'=>''));
-                    } else {
-                       foreach ( $term_array as $term ) {
-                           $term_name = esc_html($term->name);
-                           $term_slug = $term -> slug;
-                           echo ('<span class="cat-label ') ;
-                           echo esc_html($term_slug) ;
-                           echo ('">') ;
-                           echo esc_html($term->name)  ;
-                           echo ('</span>') ;
-                       }
-                    }
-                  ?>
-                </div>
-                <div class="postlist-card-date mb-1"><?php the_time('Y.m.d（D）'); ?></div>
-                <div class="postlist-card-ttl mb-1">
-                  <?php
-                    if(mb_strlen($post->post_title)>24) {
-                      $title= mb_substr($post->post_title,0,24) ;
-                        echo $title . '...';
-                    } else {
-                        echo $post->post_title;
-                    }
-                  ?>
-                </div>
-                <div class="postlist-card-excerpt">
-                  <?php
-                    $str = get_the_content();
-                    echo na_trim_words($str,45);
-                  ?>
-                </div>
-              </a>
-            </div>
-            <?php endwhile; else: ?>                   
-            <?php endif; ?>
-            <?php wp_reset_postdata(); ?>
-          </div>
-          <!-- ↑カード全体に記事リンク↑ -->
-          <!-- ↓パーツ毎にリンク↓ -->
-          <!--<div class="row px-2 px-lg-0 postlist-card-list">
-            <?php
-              $args = array(
-                'paged' => $paged,
-                'posts_per_page' => 4,
-                'post_type' => array('event'),
-              );
-              $wp_query_post = new WP_Query($args);
-              if ($wp_query_post->have_posts()): while($wp_query_post->have_posts()): $wp_query_post->the_post();
-            ?>
-            <div class="col-12 col-sm-6 col-lg-3 px-2 px-lg-3 postlist-card-item">
-              <span class="postlist-card-inner">
-                <div class="postlist-card-thumbwrap">
-                  <a href="<?php the_permalink(); ?>">
-                    <?php
-                      if (has_post_thumbnail()) {
-                        the_post_thumbnail('thumb-topblog');
-                      }else {
-                        echo '<img src="'. get_template_directory_uri() .'/images/common/NoImage.png" alt="NoImage" width="700" height="450" loading="lazy">';
-                      }
-                    ?>
-                  </a>
-                </div>
-                <div class="post-cat-wrap mt-2 mb-1">
-                  <?php 
-                    $id         = get_the_ID(); //現在の投稿のID（数値）を取得
-                    $term_array = get_the_terms( $id, 'event_taxonomy' );  //投稿に割り当てられたタクソノミーのターム（カスタム分類の項目）を取得
-                    if (!is_array($term_array)) {
-                       $term_array = array(array('title'=>''));
-                    } else {
-                        foreach ( $term_array as $term ) {
-                            $term_link = get_term_link( $term );
-                            $term_name = esc_html($term->name);
-                            $term_slug = $term -> slug;
-                            echo '<a href="'.esc_url( $term_link ).'">';
-                            echo ('<span class="cat-label ') ;
-                            echo esc_html($term_slug) ;
-                            echo ('">') ;
-                            echo esc_html($term->name)  ;
-                            echo ('</span></a>') ;
-                        }
-                    }
-                  ?>
-                </div>
-                <div class="postlist-card-date mb-1"><?php the_time('Y.m.d（D）'); ?></div>
-                <a href="<?php the_permalink(); ?>">
-                  <div class="postlist-card-ttl mb-1">
-                    <?php
-                      if(mb_strlen($post->post_title)>24) {
-                        $title= mb_substr($post->post_title,0,24) ;
-                          echo $title . '...';
-                      } else {
-                          echo $post->post_title;
-                      }
-                    ?>
-                  </div>
-                  <div class="postlist-card-excerpt">
-                    <?php
-                      $str = get_the_content();
-                      echo na_trim_words($str,45);
-                    ?>
-                  </div>
-                </a>
-              </span>
-            </div>
-            <?php endwhile; else: ?>                   
-            <?php endif; ?>
-            <?php wp_reset_postdata(); ?>
-          </div>-->
-          <!-- ↑パーツ毎にリンク↑ -->
-          <div class="pt-sm-4 text-center">
-            <a href="<?php echo esc_url( home_url() ); ?>/event/" class="btn-standard btn-size300">一覧へ</a>
-          </div>
-        </div><!-- //container -->
-      </section>
-
-      
-      <section class="three-pr-area py-5 bg-lightgray">
-        <div class="container py-lg-4">
-          <div class="mb-4">
-            <h2 class="ttl-pattern_1">PR</h2>
-            <div class="subttl text-center">3PRエリア（リンク無しデザイン）</div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 col-sm-10 col-md-4 col-lg-3 mb-4 mb-md-0 px-lg-4">
-              <div class="three-pr-inner">
-                <div class="three-pr-icon">
-                  <span><img src="<?php echo get_template_directory_uri(); ?>/images/top/icon-pc.svg" alt="アイコン" width="38" height="38" loading="lazy"></span>
-                </div>
-                <h3>タイトル１</h3>
-                <p class="text-center"><span class="d-inline-block text-start">PRの内容が入ります。PRの内容が入ります。<br>PRの内容が入ります。PRの内容が入ります。</span></p>
-              </div>
-            </div>
-            <div class="col-12 col-sm-10 col-md-4 col-lg-3 mb-4 mb-md-0 px-lg-4">
-              <div class="three-pr-inner">
-                <div class="three-pr-icon">
-                  <span><img src="<?php echo get_template_directory_uri(); ?>/images/top/icon-sp.svg" alt="アイコン" width="38" height="38" loading="lazy"></span>
-                </div>
-                <h3>タイトル２</h3>
-                <p class="text-center"><span class="d-inline-block text-start">PRの内容が入ります。PRの内容が入ります。<br>PRの内容が入ります。PRの内容が入ります。</span></p>
-              </div>
-            </div>
-            <div class="col-12 col-sm-10 col-md-4 col-lg-3 px-lg-4">
-              <div class="three-pr-inner">
-                <div class="three-pr-icon">
-                  <span><img src="<?php echo get_template_directory_uri(); ?>/images/top/icon-graph.svg" alt="アイコン" width="38" height="38" loading="lazy"></span>
-                </div>
-                <h3>タイトル３</h3>
-                <p class="text-center"><span class="d-inline-block text-start">PRの内容が入ります。PRの内容が入ります。<br>PRの内容が入ります。PRの内容が入ります。</span></p>
-              </div>
-            </div>
-          </div><!-- //row -->
-        </div><!-- //container -->
-      </section>
-      <section class="three-pr-area py-5">
-        <div class="container py-lg-4">
-          <div class="mb-4">
-            <h2 class="ttl-pattern_1">PR</h2>
-            <div class="subttl text-center">3PRエリア（リンク有りデザイン）</div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-12 col-sm-10 col-md-4 col-lg-3 mb-4 mb-lg-0">
-              <a href="<?php echo esc_url( home_url() ); ?>" class="three-pr-inner p-3 p-lg-4 hover-shadow">
-                <div class="three-pr-icon">
-                  <span><img src="<?php echo get_template_directory_uri(); ?>/images/top/icon-pc.svg" alt="アイコン" width="38" height="38" loading="lazy"></span>
-                </div>
-                <h3>タイトル１</h3>
-                <p class="text-center"><span class="d-inline-block text-start">PRの内容が入ります。PRの内容が入ります。<br>PRの内容が入ります。PRの内容が入ります。</span></p>
-                <span class="three-pr-more">詳しくはこちら</span>
-              </a>
-            </div>
-            <div class="col-12 col-sm-10 col-md-4 col-lg-3 mb-4 mb-lg-0">
-              <a href="<?php echo esc_url( home_url() ); ?>" class="three-pr-inner p-3 p-lg-4 hover-shadow">
-                <div class="three-pr-icon">
-                  <span><img src="<?php echo get_template_directory_uri(); ?>/images/top/icon-sp.svg" alt="アイコン" width="38" height="38" loading="lazy"></span>
-                </div>
-                <h3>タイトル２</h3>
-                <p class="text-center"><span class="d-inline-block text-start">PRの内容が入ります。PRの内容が入ります。<br>PRの内容が入ります。PRの内容が入ります。</span></p>
-                <span class="three-pr-more">詳しくはこちら</span>
-              </a>
-            </div>
-            <div class="col-12 col-sm-10 col-md-4 col-lg-3">
-              <a href="<?php echo esc_url( home_url() ); ?>" href="" class="three-pr-inner p-3 p-lg-4 hover-shadow">
-                <div class="three-pr-icon">
-                  <span><img src="<?php echo get_template_directory_uri(); ?>/images/top/icon-graph.svg" alt="アイコン" width="38" height="38" loading="lazy"></span>
-                </div>
-                <h3>タイトル３</h3>
-                <p class="text-center"><span class="d-inline-block text-start">PRの内容が入ります。PRの内容が入ります。<br>PRの内容が入ります。PRの内容が入ります。</span></p>
-                <span class="three-pr-more">詳しくはこちら</span>
-              </a>
-            </div>
-          </div><!-- //row -->
-        </div><!-- //container -->
-      </section>
-      <section class="py-5 bg-lightgray">
-        <div class="container py-lg-4">
-          <div class="FAQ-wrap p-3 p-md-4 p-lg-5">
-            <div class="mb-4">
-              <h2 class="ttl-pattern_1">Q&A</h2>
-              <div class="subttl text-center">よくある質問</div>
-            </div>
-            <dl class="FAQ-items">
-              <dt class="Q-box">
-                <button type="button" class="Q-box-inner js-accordion-head">
-                  <span class="FAQ-icon">Q</span><span>質問が入ります</span>
-                </button>
-              </dt>
-              <dd class="A-box js-accordion-content" style="display: none;">
-                <div class="A-box-inner">
-                  <span class="FAQ-icon">A</span><span>回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。</span>
-                </div>
-              </dd>
-            </dl>
-            <dl class="FAQ-items">
-              <dt class="Q-box">
-                <button type="button" class="Q-box-inner js-accordion-head">
-                  <span class="FAQ-icon">Q</span><span>質問が入ります</span>
-                </button>
-              </dt>
-              <dd class="A-box js-accordion-content" style="display: none;">
-                <div class="A-box-inner">
-                  <span class="FAQ-icon">A</span><span>回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。</span>
-                </div>
-              </dd>
-            </dl>
-            <dl class="FAQ-items">
-              <dt class="Q-box">
-                <button type="button" class="Q-box-inner js-accordion-head">
-                  <span class="FAQ-icon">Q</span><span>質問が入ります質問が入ります質問が入ります質問が入ります質問が入ります質問が入ります質問が入ります質問が入ります質問が入ります質問が入ります</span>
-                </button>
-              </dt>
-              <dd class="A-box js-accordion-content" style="display: none;">
-                <div class="A-box-inner">
-                  <span class="FAQ-icon">A</span><span>回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。回答が入ります。</span>
-                </div>
-              </dd>
-            </dl>
-            <dl class="FAQ-items">
-              <dt class="Q-box">
-                <button type="button" class="Q-box-inner js-accordion-head">
-                  <span class="FAQ-icon">Q</span><span>質問が入ります</span>
-                </button>
-              </dt>
-              <dd class="A-box js-accordion-content" style="display: none;">
-                <div class="A-box-inner">
-                  <span class="FAQ-icon">A</span><span>回答が入ります。</span>
-                </div>
-              </dd>
-            </dl>
-          </div><!-- //FAQ-wrap -->
+    <!--  ↑カテゴリはカテゴリへのリンクにしたver↑ -->
+    <div class="text-center btn-box">
+      <a href="<?php echo esc_url(home_url()); ?>/news/" class="button-pattern1 btn-size-top">もっと見る
+        <div class="button-arrow-box">
+          <div class="button-arrow"></div>
         </div>
-      </section>
+      </a>
+    </div>
+  </div><!-- //container -->
+</section>
+
+<section class="py-5 company bg-blue">
+  <div class="container py-lg-4 company-container">
+    <div class="mb-4">
+      <h2 class="top-ttl josefin">COMPANY</h2>
+      <div class="top-subttl">会社案内</div>
+
+    </div>
+    <div class="company-imgbox mb-2">
+      <picture>
+        <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img1.webp" type="image/webp">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img1.jpg" alt="" class="" width="600" height="667">
+      </picture>
+    </div>
+    <div class="company-txtbox">
+      <p class="company__txt1">
+        『誠意』の経営理念のもと常に相手の立場に立って考え、行動することを目指しています。<br>
+        また、お客様のニーズに合わせて製品を製造し、それらを手にとっていただく皆様の生活を陰ながら支えられることが当社の喜びの一つです。これからもお客様にご満足いただけるものづくりを通して、人と地域に寄り添う会社として様々なことにチャレンジしてまいります。
+      </p>
+      <div class="text-center btn-box">
+        <a href="<?php echo esc_url(home_url()); ?>/company/" class="button-pattern1 btn-size-top">詳しく見る
+          <div class="button-arrow-box">
+            <div class="button-arrow"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div> <!-- //container -->
+</section>
+
+<section class="py-5 service bg-blue">
+  <div class="container py-lg-4 service-container">
+    <div class="service-inner">
+      <div class="mb-4">
+        <h2 class="top-ttl josefin">SERVICE</h2>
+        <div class="top-subttl">事業案内</div>
+      </div>
+      <div class="service-imgbox mb-2">
+        <picture>
+          <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img2.webp" type="image/webp">
+          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img2.jpg" alt="" class="" width="600" height="667">
+        </picture>
+      </div>
+      <div class="company-txtbox">
+        <p class="company__txt1">
+          <span class="fw-600">建材製品及び部品製造</span><br>
+          集合住宅や戸建て住宅に設置される浴室のドア製品や窓製品及びそれらに関連する部品を製造しています。<br>
+          <br>
+          <span class="fw-600">労働者派遣事業</span><br>
+          建材製造での経験を活かし、製造業向けの労働者派遣事業を行っています。
+        </p>
+        <div class="text-center btn-box">
+          <a href="<?php echo esc_url(home_url()); ?>/company/" class="button-pattern1 btn-size-top">詳しく見る
+            <div class="button-arrow-box">
+              <div class="button-arrow"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div><!-- //container -->
+</section>
+
+<section class="py-5 recruit">
+  <div class="recruit-imgbox">
+    <picture>
+      <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img3.webp" type="image/webp">
+      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img3.jpg" alt="" class="" width="1920" height="574">
+    </picture>
+  </div>
+  <div class="container py-lg-4 bg-white recruit-container">
+
+    <div class="mb-4">
+      <h2 class="top-ttl josefin">RECRUIT</h2>
+      <div class="top-subttl">採用情報</div>
+    </div>
+    <h3 class="mb-2 fw-600 text-center">一人ひとりが主役です。</h3>
+    <p class="mb-4">私たちは社員一人ひとりが技術や経験、人間性を高めていくことでお客様の満足につながると信じています。<br>
+      そのため人材育成に注力し個人の成長から組織力の向上を図ります。また社内での研修も充実しており、教育体制にも力を注いでいます。<br>
+      すべての社員が働き易い職場環境を目指していますので、ぜひあなたも私たちと一緒にチャレンジしませんか？</p>
+    <div class="text-center btn-box">
+      <a href="<?php echo esc_url(home_url()); ?>/company/" class="button-pattern1 btn-size-top">詳しく見る
+        <div class="button-arrow-box">
+          <div class="button-arrow"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
 <?php get_footer(); ?>
