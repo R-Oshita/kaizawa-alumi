@@ -33,7 +33,7 @@ get_header(); ?>
 
 
 </section>
-<section class="py-5">
+<section class="news">
   <div class="container py-lg-4 news-container">
     <div class="mb-4 ttx-box">
       <h2 class="top-ttl josefin">NEWS</h2>
@@ -135,7 +135,7 @@ get_header(); ?>
   </div><!-- //container -->
 </section>
 
-<section class="py-5 company bg-blue">
+<section class="company bg-blue">
   <div class="container py-lg-4 company-container">
     <div class="mb-4">
       <h2 class="top-ttl josefin">COMPANY</h2>
@@ -154,7 +154,7 @@ get_header(); ?>
         また、お客様のニーズに合わせて製品を製造し、それらを手にとっていただく皆様の生活を陰ながら支えられることが当社の喜びの一つです。これからもお客様にご満足いただけるものづくりを通して、人と地域に寄り添う会社として様々なことにチャレンジしてまいります。
       </p>
       <div class="text-center btn-box">
-        <a href="<?php echo esc_url(home_url()); ?>/company/" class="button-pattern1 btn-size-top">詳しく見る
+        <a href="<?php echo esc_url(home_url()); ?>/company" class="button-pattern1 btn-size-top">詳しく見る
           <div class="button-arrow-box">
             <div class="button-arrow"></div>
           </div>
@@ -164,7 +164,7 @@ get_header(); ?>
   </div> <!-- //container -->
 </section>
 
-<section class="py-5 service bg-blue">
+<section class="service bg-blue">
   <div class="container py-lg-4 service-container">
     <div class="service-inner">
       <div class="mb-4">
@@ -197,21 +197,21 @@ get_header(); ?>
   </div><!-- //container -->
 </section>
 
-<section class="py-5 recruit">
+<section class="recruit">
   <div class="recruit-imgbox">
     <picture>
       <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img3.webp" type="image/webp">
       <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img3.jpg" alt="" class="" width="1920" height="574">
     </picture>
   </div>
-  <div class="container py-lg-4 bg-white recruit-container">
+  <div class="container bg-white recruit-container">
 
     <div class="mb-4">
       <h2 class="top-ttl josefin">RECRUIT</h2>
       <div class="top-subttl">採用情報</div>
     </div>
-    <h3 class="mb-2 fw-600 text-center">一人ひとりが主役です。</h3>
-    <p class="mb-4">私たちは社員一人ひとりが技術や経験、人間性を高めていくことでお客様の満足につながると信じています。<br>
+    <h3 class="mb-4 fw-600 text-center">一人ひとりが主役です。</h3>
+    <p class="recruit-txt">私たちは社員一人ひとりが技術や経験、人間性を高めていくことでお客様の満足につながると信じています。<br>
       そのため人材育成に注力し個人の成長から組織力の向上を図ります。また社内での研修も充実しており、教育体制にも力を注いでいます。<br>
       すべての社員が働き易い職場環境を目指していますので、ぜひあなたも私たちと一緒にチャレンジしませんか？</p>
     <div class="text-center btn-box">

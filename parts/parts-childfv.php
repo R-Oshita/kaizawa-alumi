@@ -46,12 +46,12 @@
             endif;
           ?>
           <div class="head-ttl"><?php echo $post_label; ?></div>
-          <div class="head-subttl"><?php echo $post_slug; ?></div>
+          <div class="head-subttl josefin"><?php echo $post_slug; ?></div>
         </div>
       </div>
       <?php elseif( is_page('') && !is_front_page() ) : ?>
       <div class="head-ttl-wrap">
-        <div class="container">
+        <div class="container head-ttl-inner">
           <h1 class="head-ttl"><?php the_title();?></h1>
           <?php // 投稿のスラッグを取得
             $page = get_post( get_the_ID() );

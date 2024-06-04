@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.company .head-ttl-wrap {
+    background-image: url(../images/company/head-bg-company.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@supports (background-image: url('../images/company/head-bg-company.webp')) {
+    .company .head-ttl-wrap {
+        background-image: url('../images/company/head-bg-company.webp');
+    }
+}

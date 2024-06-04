@@ -53,6 +53,7 @@
               <div class="header-nav" id="header-nav">
                 <?php
                 $args = array(
+                  'theme_location' => 'place_header',
                   'menu' => 'header-menu',
                   'container' => false,
                   'menu_class' => 'menu_class navbar-nav'

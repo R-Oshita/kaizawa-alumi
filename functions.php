@@ -41,6 +41,18 @@ function individual_styles()  {
   if ( is_page('contact-confirm') || is_page('contact-complete') || is_page('contact2-confirm') || is_page('contact2-complete') ) {
     wp_enqueue_style( 'contact', get_template_directory_uri() . '/css/style-contact.css?'. date("ymdHis", filemtime( get_stylesheet_directory() . '/css/style-contact.css')) );
   }
+  if(is_page('company')){
+    wp_enqueue_style('company', get_template_directory_uri() . '/css/style-company.css?' . date("ymdHis", filemtime(get_stylesheet_directory() . '/css/style-company.css')));
+  }
+  if (is_page('service')) {
+    wp_enqueue_style('service', get_template_directory_uri() . '/css/style-service.css?' . date("ymdHis", filemtime(get_stylesheet_directory() . '/css/style-service.css')));
+  }
+  if (is_page('recruit')) {
+    wp_enqueue_style('recruit', get_template_directory_uri() . '/css/style-recruit.css?' . date("ymdHis", filemtime(get_stylesheet_directory() . '/css/style-recruit.css')));
+  }
+  if (is_page('news')) {
+    wp_enqueue_style('news', get_template_directory_uri() . '/css/style-news.css?' . date("ymdHis", filemtime(get_stylesheet_directory() . '/css/style-news.css')));
+  }
   /*
   //イメージマップ（クリッカブルマップ）のレスポンシブ対応のためのJSです。使用するページでのみ読み込みを行い、
   //<script>imageMapResize();</script>
@@ -698,3 +710,11 @@ add_action( 'init', 'change_post_tag_to_checkbox', 1 );
 remove_filter("the_content", "wptexturize"); //本文の文字変換をオフに
 remove_filter("the_excerpt", "wptexturize"); //抜粋の文字変換をオフに
 remove_filter("the_title", "wptexturize");      //タイトルの文字変換をオフに
+
+// メニュー
+register_nav_menus(
+  array(
+'place_header' => 'ヘッダーナビ',
+'place_footer' => 'フッターナビ'
+  )
+  );

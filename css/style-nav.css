@@ -405,18 +405,19 @@ header .accordionBtn.chlidnav-opened::after {
   }
 
   .navbar-nav>li.menu-item {
-    padding: 0 25px;
+    padding: 0 8px;
 
   }
 
   .navbar-nav>li.menu-item>a {
     border: none;
     padding: 8px 0;
-    font-size: 16px;
+
   }
 
   .navbar-nav>li.menu-item:last-child a {
     border-bottom: none;
+
   }
 
   .header-tel {
@@ -424,12 +425,12 @@ header .accordionBtn.chlidnav-opened::after {
   }
 
   .header-tel__number {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 0;
   }
 
   .header-tel__time {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .header-contact {
@@ -442,7 +443,7 @@ header .accordionBtn.chlidnav-opened::after {
   }
 
   .header-contact {
-    padding: 28px 40px;
+    padding: 28px 15px;
   }
 
   /*
@@ -697,24 +698,45 @@ header .accordionBtn.chlidnav-opened::after {
   }
 }
 
+@media all and (min-width: 1200px) {
+  .header-contact {
+    padding: 28px 40px;
+  }
+
+  .navbar-nav>li.menu-item>a {
+    font-size: 1rem;
+
+  }
+
+  .navbar-nav>li.menu-item {
+    padding: 0 25px;
+
+  }
+
+  .header-tel__number {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .header-tel__time {
+    font-size: 14px;
+  }
+}
+
 /* //ヘッダー */
 
 /* フッター */
 .footer-wrap {
-  border-top: 1px solid #DEDEDE;
+  background-color: var(--base-gray);
+  padding: 50px 0 0;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
 
 .footer-content-menu {
   width: 100%;
-  margin-right: auto;
+  margin-top: 3rem;
   margin-bottom: 3rem;
-  margin-left: auto;
+  margin-inline: auto;
 }
 
 .footer-content-menu-info {
@@ -730,21 +752,22 @@ header .accordionBtn.chlidnav-opened::after {
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-nav>li {
-  width: 100%;
+
   position: relative;
 }
 
 .footer-nav a {
   font-size: .875rem;
   display: inline-block;
-  color: #333;
+  color: #fff;
 }
 
 .footer-nav a:hover {
-  color: #333;
+  color: #fff;
 }
 
 .footer-nav>li>a {
@@ -752,12 +775,8 @@ header .accordionBtn.chlidnav-opened::after {
   display: block;
   width: 100%;
   padding: 10px 7px;
-  border-top: 1px solid #e6e6e6;
 }
 
-.footer-nav>li:last-child>a {
-  border-bottom: 1px solid #e6e6e6;
-}
 
 .footer-nav .menu-item-has-children>.sub-menu>li>a {
   padding: 0 22px 5px;
@@ -816,12 +835,11 @@ footer .accordionBtn {
 }
 
 .footer-logo {
-  width: 160px;
+  width: 72px;
 }
 
 .footer-copy-wrap {
-  padding: 25px 0;
-  background-color: #444;
+  padding: 43px 0;
   color: #FFF;
   text-align: center;
 }
@@ -876,6 +894,20 @@ footer .accordionBtn {
   box-shadow: 0 0 10px rgb(0, 0, 0, .4);
 }
 
+@media all and (min-width: 768px) {
+  .footer-nav {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .footer-nav>li:last-child>a {
+    font-size: 1rem;
+  }
+
+  .footer-nav>li>a {
+    padding: 5px 15px;
+  }
+}
+
 @media all and (min-width: 992px) {
   .footer-content {
     flex-wrap: nowrap;
@@ -884,14 +916,8 @@ footer .accordionBtn {
   .footer-content-menu {
     width: max-content;
     order: 1;
-    margin-right: 0;
     margin-bottom: 0;
-  }
-
-  .footer-content-menu-info {
-    order: 0;
-    width: 30%;
-    text-align: left;
+    margin-top: 1.3rem;
   }
 
   .footer-nav {
@@ -904,7 +930,7 @@ footer .accordionBtn {
 
   .footer-nav>li>a {
     border-top: none;
-    padding: 5px 15px;
+    padding: 5px 28px;
   }
 
   .footer-nav>li:last-child>a {
@@ -929,11 +955,7 @@ footer .accordionBtn {
   }
 }
 
-@media (min-width: 1200px) {
-  .footer-content-menu-info {
-    width: 40%;
-  }
-}
+@media (min-width: 1200px) {}
 
 /* //フッター */
 

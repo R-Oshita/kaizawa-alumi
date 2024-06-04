@@ -60,11 +60,13 @@ main {
   margin-top: 42.5px;
 }
 
-@media all and (min-width: 992px) {
+@media all and (min-width: 768px) {
   main {
-    margin-top: 0;
+    margin-top: 80px;
   }
 }
+
+@media all and (min-width: 992px) {}
 
 /* //mainタグ上の余白 */
 
@@ -137,7 +139,7 @@ main {
 
 .button-arrow-box {
   position: absolute;
-  right: 10px;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -227,24 +229,58 @@ main {
 /* 下層FV */
 .head-ttl-wrap {
   padding: 2rem 0px;
-  background: #F7F7F7;
+  color: #fff;
+  height: calc(300/1080*100svh);
+  display: flex;
+  align-items: center;
+}
+
+.head-ttl-inner {
+  display: flex;
 }
 
 .head-ttl {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   line-height: 1;
 }
 
 .head-subttl {
-  font-size: 1.07rem;
-  padding-left: 3px;
+  font-size: 0.75rem;
+  padding-left: 10px;
   text-transform: uppercase;
   /* 大文字にする */
-  color: #707070;
   letter-spacing: 0.05em;
   line-height: 1;
+  position: relative;
+  margin-top: 5px;
+}
+
+.head-subttl::after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 1px;
+  background-color: #fff;
+  top: 5px;
+  right: -55px;
+}
+
+@media all and (min-width: 768px) {
+  .head-subttl::after {
+    top: 10px;
+  }
+
+  .head-ttl {
+    font-size: 2rem;
+  }
+
+  .head-subttl {
+    padding-left: 20px;
+    font-size: 1.5rem;
+  }
+
 }
 
 @media all and (min-width: 992px) {
@@ -258,6 +294,7 @@ main {
 /* パンくず */
 .breadcrumb-wrap {
   /*  background: #eeeeee;*/
+  padding: 10px 0;
 }
 
 .breadcrumb ul {
@@ -722,17 +759,24 @@ a.three-pr-inner:hover {
 .cta-section {
   background-image: url(../images/top/cta-bg.jpg);
   background-size: cover;
+  margin-top: 77px;
 }
 
 .cta-box {
   color: #fff;
   text-align: center;
+  margin-top: 30px;
 }
 
 .cta-catchcopy {
   font-size: 0.75rem;
   font-weight: 700;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-content {
+  justify-content: center;
 }
 
 .cta-contact-btn {
@@ -771,17 +815,36 @@ a.three-pr-inner:hover {
   font-size: 1.75rem;
   font-weight: 700;
   color: #333;
+  letter-spacing: 0.2em;
 }
 
 .cta-tel-btn_inner {
   padding-left: 20px;
   position: relative;
   color: #fff;
+  font-weight: 400;
 }
 
-.cta-contact .button-pattern1{
-  
+.btn-size-cta {
+  display: block;
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+  width: 250px;
+  height: 60px;
 }
+
+.cta-contact__txt1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cta-contact {
+  margin-bottom: 30px;
+}
+
+.cta-contact .button-pattern1 {}
 
 @media all and (min-width: 576px) {}
 
@@ -793,13 +856,49 @@ a.three-pr-inner:hover {
 
   .cta-catchcopy {
     font-size: 1.125rem;
+    margin-top: 55px;
+  }
+
+  .btn-size-cta {
+    display: block;
+    margin-inline: auto;
+    display: grid;
+    place-items: center;
+    width: 349px;
+    height: 69px;
+  }
+
+  .cta-contact__txt1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .cta-content {
+    gap: 160px;
+  }
+
+  .cta-contact-btn_inner {
+    font-size: 20px;
+  }
+
+  .cta-tel-btn_inner {
+    font-size: 50px;
+  }
+
+  .tel-time {
+    font-size: 16px;
+    text-align: right;
+  }
+
+  .cta-section {
+    margin-top: 127px;
   }
 }
 
 @media all and (min-width: 992px) {
   .cta-box {
     width: 80%;
-    margin: auto;
+    margin-inline: auto;
   }
 }
 
@@ -847,17 +946,17 @@ a.three-pr-inner:hover {
 .postlist-simple-items::before,
 .postlist-simple-items::after {
   content: "";
-  width: 6px;
+  width: 7px;
   height: 1px;
   display: inline-block;
   border-radius: 2px;
   background: var(--base-blue);
   position: absolute;
-  right: 10px;
+  right: 20px;
 }
 
 .postlist-simple-items::before {
-  top: calc(50% - 5px);
+  top: calc(50% - 6px);
   transform: rotate(45deg);
 }
 
@@ -873,11 +972,11 @@ a.three-pr-inner:hover {
 .postlist-simple-inner {
   display: flex;
   flex-wrap: wrap;
-  padding: 12px 0;
+  padding: 16px 0;
 }
 
 .postlist-simple-date {
-  font-size: 1.06rem;
+  font-size: .875rem;
   font-weight: 500;
   padding-right: 15px;
   color: #333;
@@ -889,12 +988,13 @@ a.three-pr-inner:hover {
   }
 
   .postlist-simple-date {
+    padding-left: 25px;
     padding-right: 25px;
   }
 
   .postlist-simple-ttl {
     padding-top: 0;
-    padding-left: 25px;
+    padding-left: 30px;
     width: auto;
   }
 
