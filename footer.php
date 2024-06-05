@@ -1,7 +1,7 @@
     </main>
     </div><!-- header-and-main -->
     <footer>
-      <?php if (is_front_page()) : ?>
+      <?php if (is_front_page()): ?>
         <section class="py-5 cta-section">
           <div class="container">
             <div class="cta-box">

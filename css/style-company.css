@@ -11,3 +11,146 @@
         background-image: url('../images/company/head-bg-company.webp');
     }
 }
+
+.ttl-pattern_h3 {
+    font-size: 1.625rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* message */
+
+
+.message {
+    background-color: var(--bg-lightblue);
+}
+
+.message-txt {
+    line-height: 2;
+}
+
+@media all and (min-width: 768px) {
+
+    .message-txt {
+        text-align: center;
+    }
+}
+
+/* //message */
+
+/* philosophy */
+.philosophy-box {
+    background-color: var(--bg-lightblue);
+    padding: 30px 3%;
+}
+
+.philosophy-ttl {
+    font-size: 1.625rem;
+    color: var(--base-blue);
+    font-weight: 600;
+}
+
+.philosophy-txt {
+    margin-top: 20px;
+    line-height: 2;
+    margin-bottom: 0;
+    max-width: 1080px;
+    margin-inline: auto;
+}
+
+
+.icon-card {
+    margin-bottom: 50px;
+    max-width: 350px;
+    margin-inline:auto;
+}
+
+.icon-card-img {
+    margin-bottom: 15px;
+}
+
+@media all and (min-width: 576px) {
+    .icon-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .philosophy-box {
+        padding: 30px 5%;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .philosophy-box {
+        padding: 57px 5%;
+    }
+
+
+}
+
+@media all and (min-width: 992px) {
+    .icon-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .icon-card-img {
+        margin-bottom: 30px;
+    }
+}
+
+/* //philosophy */
+
+/* profile */
+.profile {
+    background-image: url(../images/company/profile-bg.jpg);
+    background-size: cover;
+    color: #fff;
+}
+
+.profile .ttl-pattern_2-wrap .subttl {
+    color: #fff;
+}
+
+.profile .ttl-pattern_2::after {
+    background-color: #fff;
+}
+
+.profile-dl {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.profile-dl dt {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 0;
+}
+
+.profile-dl dd {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #fff;
+}
+
+@media all and (min-width: 576px) {
+    .profile-dl {
+
+        max-width: 636px;
+        margin-inline: auto;
+    }
+
+}
+
+/* //profile */
+
+/* history */
+.history .profile-dl dt,
+.history .profile-dl dd {
+    border-bottom: 1px solid #D8D8D8;
+}
+
+/* //history */

@@ -11,27 +11,30 @@
       }
       ?>
     </div> -->
-    <div class="postlist-line-textwrap d-flex">
-
+    <div class="postlist-line-textwrap">
+      <div class="d-flex mb-2">
         <div class="postlist-line-date"><?php the_time('Y.m.d'); ?></div>
         <div class="post-cat-wrap">
           <?php
           $id         = get_the_ID(); //現在の投稿のID（数値）を取得
-          $term_array = get_the_terms($id, 'category');  //投稿に割り当てられたタクソノミーのタームを取得
-          if (!is_array($term_array) || empty($term_array)) {
-            echo '<span class="cat-label"></span>'; // タームがない場合の処理
+          $term_array = get_the_terms($id, 'category');  //投稿に割り当てられたタクソノミーのターム（カスタム分類の項目）を取得
+          if (!is_array($term_array)) {
+            $term_array = array(array('title' => ''));
           } else {
-            $term = $term_array[0]; // 最初のタームのみを取得
-            $term_name = esc_html($term->name);
-            $term_slug = $term->slug;
-            echo ('<span class="cat-label ' . esc_html($term_slug) . '">');
-            echo esc_html($term_name);
-            echo ('</span>');
+            foreach ($term_array as $term) {
+              $term_name = esc_html($term->name);
+              $term_slug = $term->slug;
+              echo ('<span class="cat-label ');
+              echo esc_html($term_slug);
+              echo ('">');
+              echo esc_html($term->name);
+              echo ('</span>');
+            }
           }
           ?>
         </div>
-        <div class="postlist-line-ttl"><?php the_title(); ?></div>
-    
+        <div class="postlist-line-ttl pb-4"><?php the_title(); ?></div>
+      </div>
 
 
       <!-- <div class="postlist-line-excerpt d-none d-sm-block">
@@ -41,7 +44,12 @@
         ?>
       </div> -->
     </div>
-
+    <p class="postlist-line-excerpt_sp d-sm-none">
+      <?php
+      // $str = get_the_excerpt();
+      // echo na_trim_words($str, 60);
+      ?>
+    </p>
   </a>
 </li>
 <!--  ↑全部記事へのリンクのver↑ -->

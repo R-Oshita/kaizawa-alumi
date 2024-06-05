@@ -18,6 +18,19 @@
   <script>
     console.log("")
   </script><!-- chrometransitionバグ対策 -->
+  <?php if(is_page('recruit')): ?>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      new ScrollHint('.js-scrollable', {
+        scrollHintIconAppendClass: 'scroll-hint-icon-black',
+        suggestiveShadow: true,
+        i18n: {
+          scrollable: "スクロールできます"
+        }
+      });
+    });
+  </script>
+  <?php endif; ?>
 </head>
 
 <body <?php body_class(); ?> style="visibility: hidden;" id="body" ontouchstart="">
@@ -83,6 +96,7 @@
       ?>
     </header>
     <main id="main">
+      
       <?php get_template_part('parts/parts-childfv'); ?>
       <?php if (!is_front_page()) : ?>
         <div class="breadcrumb-wrap">

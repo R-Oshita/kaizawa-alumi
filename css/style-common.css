@@ -176,7 +176,7 @@ main {
 .button-arrow::after {
   display: block;
   left: 7px;
-  top: 3px;
+  top: 2px;
   width: 5px;
   height: 5px;
   border-top: 1px solid var(--base-blue);
@@ -297,6 +297,10 @@ main {
   padding: 10px 0;
 }
 
+.breadcrumb {
+  margin-bottom: 0;
+}
+
 .breadcrumb ul {
   display: block;
   overflow-x: auto;
@@ -373,14 +377,40 @@ main {
   left: auto;
 }
 
+.ttl-pattern_2-wrap .subttl {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: var(--base-blue);
+}
+
 .ttl-pattern_2, .blockeditor-area h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
-  padding: 10px 10px 10px 22px;
-  background-color: #f0f0f0;
-  border-left: 3px solid #666;
-  margin-bottom: 1rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.ttl-pattern_2-wrap.text-center .ttl-pattern_2::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ttl-pattern_2::after, .blockeditor-area h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 1px;
+  background-color: var(--base-blue);
+}
+
+@media all and (min-width: 992px) {
+  .ttl-pattern_2, .blockeditor-area h1 {
+    margin-bottom: 3.125rem;
+  }
 }
 
 .ttl-pattern_3 {
@@ -917,13 +947,15 @@ a.three-pr-inner:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: .75rem;
   color: #fff;
-  font-size: .875rem;
-  background-color: #999;
-  padding: 1px 8px;
+  background-color: #0457a7;
+  border-radius: 13.5px;
+  padding: 5px 20px;
   min-width: 72px;
   width: max-content;
   height: fit-content;
+  font-weight: 600;
 }
 
 .cat-label:not(:last-child), .post-cat-wrap a:not(:last-child) {
@@ -1013,11 +1045,16 @@ a.three-pr-inner:hover {
 .postlist-line-date {
   font-size: 14px;
   color: #333;
+  margin-top: 4px;
 }
 
 .postlist-line-ttl {
-  font-size: 1.125rem;
-  font-weight: 700;
+  width: 100%;
+  font-size: 1rem;
+  margin-left: 10px;
+  margin-top: 3px;
+  padding-right: 25px;
+  color: #333;
 }
 
 .postlist-line-excerpt {
@@ -1051,7 +1088,8 @@ a.three-pr-inner:hover {
 }
 
 .postlist-line-textwrap {
-  width: 66.66666667%;
+  width: 100%;
+  flex-wrap: wrap;
   padding-right: 12px;
   padding-left: 12px;
 }
@@ -1065,13 +1103,15 @@ a.three-pr-inner:hover {
 @media all and (min-width: 576px) {}
 
 @media all and (min-width: 768px) {
-  .postlist-line-thumbwrap {
-    width: 224px;
-    padding-right: 12px;
+  .postlist-line-textwrap {
+    flex-wrap: nowrap;
   }
 
-  .postlist-line-textwrap {
-    width: calc(100% - 224px);
+  .postlist-line-ttl {
+
+    margin-left: 35px;
+    padding-right: 35px;
+    width: auto;
   }
 }
 
@@ -1129,17 +1169,12 @@ a.three-pr-inner:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #666;
   background-color: #FFFFFF;
-  color: #666;
-  position: relative;
+  color: #CDCDCD;
 }
 
 .tablenav .current {
-  color: #fff;
-  background-color: #666;
+  color: var(--base-blue);
 }
 
 .page-numbers.prev::before {
@@ -1183,7 +1218,7 @@ a.three-pr-inner:hover {
 
 .sidebar-linklist>li>a {
   display: block;
-  padding: 8px 0;
+  padding: 16px 0;
   color: #333;
 }
 
@@ -1208,22 +1243,10 @@ a.three-pr-inner:hover {
 .sidebar-ttl {
   font-size: 1.06rem;
   padding-bottom: 5px;
-  border-bottom: 1px solid #989d9e;
   position: relative;
   margin-bottom: 0;
   display: block;
   color: #333;
-}
-
-.sidebar-ttl::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  z-index: 2;
-  width: 20%;
-  height: 1px;
-  background-color: #444;
 }
 
 .sidebar-post-wrap {
@@ -1767,6 +1790,21 @@ a:hover {
 }
 
 /* //幅広 */
+
+/* セクションごとの余白*/
+.sec {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media all and (min-width: 768px) {
+  .sec {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+}
+
 /* 下記はコピペ用。パーツ毎にレスポンシブの記述をしてください。 */
 @media all and (min-width: 576px) {}
 

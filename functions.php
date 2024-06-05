@@ -49,9 +49,12 @@ function individual_styles()  {
   }
   if (is_page('recruit')) {
     wp_enqueue_style('recruit', get_template_directory_uri() . '/css/style-recruit.css?' . date("ymdHis", filemtime(get_stylesheet_directory() . '/css/style-recruit.css')));
+    wp_enqueue_style('scroll-hint', get_template_directory_uri() . '/css/scroll-hint.css?' . date("ymdHis", filemtime(get_stylesheet_directory() . '/css/scroll-hint.css')));
+    wp_enqueue_script('scroll-hint-script', get_template_directory_uri() . '/js/scroll-hint.min.js?' . date("ymdHis", filemtime(get_template_directory() . '/js/scroll-hint.min.js')), array(), NULL, true);
   }
-  if (is_page('news')) {
+  if (is_single()|| is_archive()) {
     wp_enqueue_style('news', get_template_directory_uri() . '/css/style-news.css?' . date("ymdHis", filemtime(get_stylesheet_directory() . '/css/style-news.css')));
+    
   }
   /*
   //イメージマップ（クリッカブルマップ）のレスポンシブ対応のためのJSです。使用するページでのみ読み込みを行い、
@@ -436,7 +439,7 @@ function post_has_archive( $args, $post_type ) {
   if ( 'post' == $post_type ) {
     $args['rewrite'] = true;
     $args['has_archive'] = 'news'; //任意のスラッグ名。変更した後はパーマリンクの更新を行ってください。この行をコメントアウトするとデフォルト投稿のアーカイブページが存在しなくなります。
-    $args['label'] = '新着情報';//適宜案件に応じて名前は変更してください。
+    $args['label'] = 'お知らせ';//適宜案件に応じて名前は変更してください。
   }
   return $args;
 }
