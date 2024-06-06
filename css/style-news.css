@@ -179,3 +179,23 @@
     -webkit-transform: rotate(-135deg);
     transform: rotate(-135deg);
 }
+
+/* シングルページ */
+.paging-simple .paging-label {
+    color: #fff;
+    background-color: var(--base-blue);
+    border-radius: 20px;
+    width: 80px;
+}
+
+@media all and (min-width: 768px) {
+    .paging-simple .paging-label {
+        width: 110px;
+    }
+
+    .paging-simple .paging-label>a {
+        padding: 8px 0 8px;
+    }
+}
+
+/* //シングルページ */

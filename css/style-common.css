@@ -414,32 +414,21 @@ main {
 }
 
 .ttl-pattern_3 {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.875rem;
+  font-weight: 600;
   letter-spacing: 0.1em;
   position: relative;
   padding-bottom: 12px;
-  border-bottom: 1px solid #CDCDCD;
   margin-bottom: 1rem;
 }
 
-.ttl-pattern_3::after {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  z-index: 2;
-  content: '';
-  width: 25%;
-  max-width: 128px;
-  height: 1px;
-  background-color: #666;
-}
+
 
 .ttl-pattern_4, .blockeditor-area h2 {
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  border-left: 1px solid #666;
+  border-left: 2px solid var(--base-blue);
   padding: 3px 0 3px 1.06rem;
   margin-bottom: 1rem;
 }
@@ -461,22 +450,26 @@ main {
   content: '';
   width: 50px;
   max-width: 128px;
-  height: 1px;
-  background-color: #666;
+  height: 2px;
+  background-color: var(--base-blue);
 }
 
 .ttl-pattern_6, .blockeditor-area h4 {
   font-size: 1.06rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #666;
+  border-bottom: 2px solid var(--base-blue);
   padding-bottom: .35rem;
 }
 
 .ttl-pattern_7, .blockeditor-area h5 {
   font-size: 1.06rem;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 1rem;
+  color: #fff;
+  background-color: var(--base-blue);
+  padding: 12px 14px;
+  border-radius: 3px;
 }
 
 .subttl {
@@ -560,7 +553,7 @@ main {
   left: 2px;
   width: 8px;
   height: 8px;
-  background: #888;
+  background: var(--base-blue);
   border-radius: 50%;
 }
 
@@ -949,7 +942,7 @@ a.three-pr-inner:hover {
   justify-content: center;
   font-size: .75rem;
   color: #fff;
-  background-color: #0457a7;
+  background-color: var(--base-blue);
   border-radius: 13.5px;
   padding: 5px 20px;
   min-width: 72px;
@@ -1366,7 +1359,7 @@ a.three-pr-inner:hover {
 
 /* シングルページ前後記事リンク（シンプル） */
 .paging-simple {
-  border-top: 1px solid #989d9e;
+  border-top: 1px solid #E7E7E7;
   display: flex;
   justify-content: space-between;
 }
@@ -1380,7 +1373,6 @@ a.three-pr-inner:hover {
   display: block;
   width: 100%;
   color: #fff;
-  background-color: #666;
   text-align: center;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -1809,12 +1801,41 @@ a:hover {
 
 }
 
+/* ブロックエディタの追加スタイル */
+.is-style-firstColumn tr:first-child {
+  background-color: #F8F8F8;
+}
 
+.is-style-firstColumn.wp-block-table td,
+.is-style-firstColumn.wp-block-table th {
+  border: none;
+  border-bottom: 1px solid #C0C0C0;
+}
+
+.is-style-firstColumn.wp-block-table tr:first-child td,
+.is-style-firstColumn.wp-block-table tr:first-child th {
+  border: none;
+}
+
+.is-style-quote-gray {
+  background-color: #F7F7F7;
+  border-radius: 5px;
+  padding: 20px;
+  border-left: none;
+}
+
+.is-style-quote-gray p {
+  margin-bottom: 0;
+}
 
 /* 下記はコピペ用。パーツ毎にレスポンシブの記述をしてください。 */
 @media all and (min-width: 576px) {}
 
-@media all and (min-width: 768px) {}
+@media all and (min-width: 768px) {
+  .is-style-quote-gray {
+    padding: 40px;
+  }
+}
 
 @media all and (min-width: 992px) {}
 
