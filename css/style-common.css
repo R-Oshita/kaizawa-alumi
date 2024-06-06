@@ -1169,8 +1169,12 @@ a.three-pr-inner:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FFFFFF;
-  color: #CDCDCD;
+  width: 27px;
+  height: 30px;
+  background-color: #ffffff;
+  color: #cdcdcd;
+  position: relative;
+  font-weight: 500;
 }
 
 .tablenav .current {
@@ -1804,6 +1808,8 @@ a:hover {
   }
 
 }
+
+
 
 /* 下記はコピペ用。パーツ毎にレスポンシブの記述をしてください。 */
 @media all and (min-width: 576px) {}
