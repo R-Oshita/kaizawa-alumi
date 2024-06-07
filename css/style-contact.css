@@ -203,15 +203,33 @@
 /*iPhone5:SE*/
 @media all and (max-width: 320px) {}
 
-.head-ttl-wrap {
+.contact .head-ttl-wrap,
+.contact-finish .head-ttl-wrap {
   background-image: url(../images/contact/head-bg-contact.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 @supports (background-image: url('../images/contact/head-bg-contact.webp')) {
-  .head-ttl-wrap {
+
+  .contact .head-ttl-wrap,
+  .contact-finish .head-ttl-wrap {
     background-image: url('../images/contact/head-bg-contact.webp');
+  }
+}
+
+.entry-form .head-ttl-wrap,
+.entry-form-finish .head-ttl-wrap {
+  background-image: url(../images/recruit/head-bg-recruit.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@supports (background-image: url('../images/recruit/head-bg-recruit.webp')) {
+
+  .entry-form .head-ttl-wrap,
+  .entry-form-finish .head-ttl-wrap {
+    background-image: url('../images/recruit/head-bg-recruit.webp');
   }
 }
 
@@ -311,7 +329,7 @@
   border: 1px solid var(--base-blue);
 }
 
-.search-style>a{
+.search-style>a {
   color: var(--base-blue);
   font-weight: 500;
   font-size: 1rem;

@@ -1,7 +1,9 @@
 @charset "utf-8";
-a:hover{
+
+a:hover {
   color: #fff;
 }
+
 /* topの共通項目 */
 .top-ttl {
   font-size: 34px;
@@ -37,7 +39,7 @@ a:hover{
 
 .bg-blue::before {
   content: "";
-  width: 68.1%;
+  width: 84.1%;
   height: 66.9%;
   background: linear-gradient(to right, #c1e2ff 0%, #fff 51.23%, #c1e2ff 100%);
   opacity: 0.8;
@@ -48,7 +50,7 @@ a:hover{
 
 @media all and (min-width: 768px) {
   .top-ttl {
-    font-size: 60px;
+    font-size: 50px;
     text-align: left;
   }
 
@@ -60,9 +62,23 @@ a:hover{
   .button-pattern1 {
     margin-inline: 0;
   }
+
+  .bg-blue::before {
+    width: 68.1%;
+    height: 71.9%;
+  }
 }
 
-@media all and (min-width: 992px) {}
+@media all and (min-width: 992px) {
+  .top-ttl {
+    font-size: 60px;
+
+  }
+
+  .bg-blue::before {
+    height: 66.9%;
+  }
+}
 
 /* topの共通項目 */
 
@@ -282,7 +298,7 @@ a:hover{
 
 @media all and (min-width: 768px) {
   .fv-container {
-    height: 59vw;
+    height: 55vw;
   }
 
   .fv-imgbox {
@@ -291,7 +307,7 @@ a:hover{
   }
 
   .fv-txtbox {
-    top: 19vw;
+    top: 15vw;
     left: 11vw;
   }
 
@@ -336,7 +352,7 @@ a:hover{
 
 @media all and (min-width: 768px) {
   .news {
-    padding-top: 120px;
+    padding-top: 100px;
   }
 
   .news .button-pattern1 {
@@ -348,6 +364,7 @@ a:hover{
     grid-template-rows: 100px 100px;
     grid-template-columns: 1fr 80.55%;
     position: relative;
+    column-gap: 30px;
   }
 
   .ttl-box {
@@ -365,6 +382,22 @@ a:hover{
     grid-row: 2 / 3;
     grid-column: 1 / 2;
   }
+
+  .postlist-simple {
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .news-container {
+    column-gap: 60px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .postlist-simple {
+    width: 100%;
+  }
 }
 
 /* //news */
@@ -372,6 +405,7 @@ a:hover{
 /* company */
 .company {
   margin-top: 70px;
+  padding-bottom: 50px;
 }
 
 .company.bg-blue::before {
@@ -384,7 +418,8 @@ a:hover{
   margin-inline: auto;
 }
 
-.company__txt1 {
+.company__txt1,
+.service__txt1 {
   line-height: 2;
   margin-bottom: 37px;
 }
@@ -393,11 +428,12 @@ a:hover{
 @media all and (min-width: 768px) {
   .company {
     margin-top: 87px;
+    padding-bottom: 0;
   }
 
   .company .top-ttl,
   .service .top-ttl {
-    padding-top: 87px;
+    padding-top: 50px;
     padding-bottom: 12px;
   }
 
@@ -406,10 +442,24 @@ a:hover{
   }
 
   .company-imgbox {
-    max-width: 600px;
+    max-width: 300px;
     position: absolute;
     right: 0;
     top: 0;
+  }
+
+  .company-txtbox {
+    max-width: 360px;
+    padding: 25px 0 60px 0;
+  }
+
+}
+
+@media all and (min-width: 992px) {
+  .company-imgbox {
+    width: 46%;
+    max-width: 600px;
+
   }
 
   .company-txtbox {
@@ -417,6 +467,15 @@ a:hover{
     padding: 50px 0 172px 0;
   }
 
+  .company-txtbox {
+    width: 44%;
+  }
+
+  .company .top-ttl,
+  .service .top-ttl {
+    padding-top: 87px;
+    padding-bottom: 12px;
+  }
 }
 
 /* //company */
@@ -437,9 +496,7 @@ a:hover{
   position: relative;
 }
 
-.service-inner {
-  max-width: 572px;
-}
+
 
 @media all and (min-width: 768px) {
   .service {
@@ -447,11 +504,50 @@ a:hover{
     margin-bottom: 120px;
   }
 
+  .service-inner {
+    margin-left: auto;
+    max-width: 360px;
+  }
+
   .service-imgbox {
-    max-width: 600px;
+    max-width: 300px;
     position: absolute;
     left: 0;
     top: 0;
+  }
+
+  .service-txtbox {
+
+    padding: 25px 0 60px 0;
+  }
+}
+
+@media all and (min-width: 992px) {
+
+  .service-inner {
+    max-width: 410px;
+  }
+
+  .service-imgbox {
+    width: 46%;
+    max-width: 600px;
+  }
+
+  .service-txtbox {
+
+    padding: 50px 0 142px 0;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .service-inner {
+    max-width: 530px;
+  }
+}
+
+@media all and (min-width: 1400px) {
+  .service-inner {
+    max-width: 572px;
   }
 }
 
@@ -487,12 +583,19 @@ a:hover{
 
 .recruit-txt {
   margin-bottom: 45px;
+  line-height: 2;
+}
+
+@media all and (min-width: 576px) {
+  .recruit-container {
+    margin-top: -50px;
+  }
 }
 
 @media all and (min-width: 768px) {
   .recruit-container {
     margin-top: -190px;
-    padding-top: 94px;
+    padding-top: 83px;
   }
 
   .recruit-container h3 {
@@ -506,11 +609,29 @@ a:hover{
   }
 }
 
+@media all and (min-width: 992px) {
+  .recruit-container {
+    margin-top: -85px;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .recruit-container {
+    margin-top: -105px;
+  }
+}
+
+@media all and (min-width: 1600px) {
+  .recruit-container {
+    margin-top: -190px;
+  }
+}
+
 /* //recruit */
 
 /* cta */
-.cta-contact__txt1 img{
-margin-right: 10px;
+.cta-contact__txt1 img {
+  margin-right: 10px;
 }
 
 /* //cta */

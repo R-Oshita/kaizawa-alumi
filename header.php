@@ -18,18 +18,18 @@
   <script>
     console.log("")
   </script><!-- chrometransitionバグ対策 -->
-  <?php if(is_page('recruit')): ?>
-  <script>
-    window.addEventListener('DOMContentLoaded', function() {
-      new ScrollHint('.js-scrollable', {
-        scrollHintIconAppendClass: 'scroll-hint-icon-black',
-        suggestiveShadow: true,
-        i18n: {
-          scrollable: "スクロールできます"
-        }
+  <?php if (is_page('recruit')) : ?>
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        new ScrollHint('.js-scrollable', {
+          scrollHintIconAppendClass: 'scroll-hint-icon-black',
+          suggestiveShadow: true,
+          i18n: {
+            scrollable: "スクロールできます"
+          }
+        });
       });
-    });
-  </script>
+    </script>
   <?php endif; ?>
 </head>
 
@@ -77,7 +77,7 @@
                   <p class="header-tel__number text-blue mb-2 mb-lg-0"><img src="<?php echo get_template_directory_uri(); ?>/images/common/header-phone-icon.svg" alt="" class="" width="15" height="15" loading="lazy">0765-52-1793</p>
                   <p class="header-tel__time">受付時間：平日00:00～00:00</p>
                 </div>
-                <a href="/contact" class="header-contact"><img src="<?php echo get_template_directory_uri(); ?>/images/common/header-mail-icon.svg" alt="" class="" width="20" height="15" loading="lazy">お問い合わせ</a>
+                <a href="<?php echo esc_url(home_url()); ?>/contact/" class="header-contact"><img src="<?php echo get_template_directory_uri(); ?>/images/common/header-mail-icon.svg" alt="" class="" width="20" height="15" loading="lazy">お問い合わせ</a>
 
               </div>
 
@@ -96,7 +96,7 @@
       ?>
     </header>
     <main id="main">
-      
+
       <?php get_template_part('parts/parts-childfv'); ?>
       <?php if (!is_front_page()) : ?>
         <div class="breadcrumb-wrap">

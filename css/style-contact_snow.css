@@ -322,7 +322,13 @@
 }
 
 .bg-blue{
+  padding: 30px;
   background-color: var(--bg-lightblue);
+}
+
+.personal-inner{
+  max-width: 856px;
+  margin-inline:auto;
 }
 @media all and (min-width: 576px) {
   .contact-txt1{
@@ -330,7 +336,11 @@
   }
 }
 
-@media all and (min-width: 768px) {}
+@media all and (min-width: 768px) {
+  .bg-blue{
+    padding: 60px;
+  }
+}
 
 @media all and (min-width: 992px) {}
 

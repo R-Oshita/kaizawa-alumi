@@ -794,8 +794,8 @@ a.three-pr-inner:hover {
 .cta-catchcopy {
   font-size: 0.75rem;
   font-weight: 700;
-  margin-bottom: 2.2rem;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 
 .cta-content {
@@ -831,7 +831,9 @@ a.three-pr-inner:hover {
 }
 
 .tel-time {
+  font-weight: 600;
   font-size: .875rem;
+  letter-spacing: 0.09em;
 }
 
 .cta-tel-btn {
@@ -861,13 +863,16 @@ a.three-pr-inner:hover {
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
+  letter-spacing: 0.09em;
 }
 
 .cta-contact {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-.cta-contact .button-pattern1 {}
+.cta-contact .button-pattern1 {
+  margin-top: 10px;
+}
 
 @media all and (min-width: 576px) {}
 
@@ -879,7 +884,7 @@ a.three-pr-inner:hover {
 
   .cta-catchcopy {
     font-size: 1.125rem;
-    margin-top: 55px;
+    margin-top: 67px;
   }
 
   .btn-size-cta {
@@ -887,17 +892,18 @@ a.three-pr-inner:hover {
     margin-inline: auto;
     display: grid;
     place-items: center;
-    width: 349px;
+    width: 310px;
     height: 69px;
   }
 
   .cta-contact__txt1 {
-    font-size: 26px;
-    margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 0px;
   }
 
   .cta-content {
-    gap: 160px;
+    justify-content: space-between;
+    gap: 50px;
   }
 
   .cta-contact-btn_inner {
@@ -905,7 +911,8 @@ a.three-pr-inner:hover {
   }
 
   .cta-tel-btn_inner {
-    font-size: 50px;
+    font-size: 45px;
+    letter-spacing: 0.09em;
   }
 
   .tel-time {
@@ -923,9 +930,29 @@ a.three-pr-inner:hover {
     width: 80%;
     margin-inline: auto;
   }
+
+
+
 }
 
-@media all and (min-width: 1200px) {}
+@media all and (min-width: 1200px) {
+  .cta-content {
+    justify-content: center;
+    gap: 160px;
+  }
+
+  .cta-contact__txt1 {
+    font-size: 26px;
+  }
+
+  .btn-size-cta {
+    width: 349px;
+  }
+
+  .cta-tel-btn_inner {
+    font-size: 50px;
+  }
+}
 
 /* //CTAエリア */
 
@@ -960,8 +987,6 @@ a.three-pr-inner:hover {
 /* 記事一覧（サムネ無しリスト形式） */
 .postlist-simple {
   max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .postlist-simple-items {

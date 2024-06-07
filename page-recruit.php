@@ -110,7 +110,7 @@
       </table>
     </div>
     <div class="text-center btn-box">
-      <a href="<?php echo esc_url(home_url()); ?>/news/" class="button-pattern1 btn-size-about">エントリー入力フォーム
+      <a href="<?php echo esc_url(home_url()); ?>/recruit/entry-form/" class="button-pattern1 btn-size-about">エントリー入力フォーム
         <div class="button-arrow-box">
           <div class="button-arrow"></div>
         </div>

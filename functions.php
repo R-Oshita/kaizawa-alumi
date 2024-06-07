@@ -27,7 +27,7 @@ function individual_styles()  {
     wp_enqueue_style( 'slider', get_template_directory_uri() . '/css/splide-core.min.css', array(), '1' );
     wp_enqueue_script( 'slide-script', get_template_directory_uri() . '/js/splide.min.js', array(), NULL, true  );
   }
-  if ( is_page('contact') || is_page('contact2') || is_page('contact_snow') || is_page('entry-form') ) {
+  if ( is_page('contact') || is_page('contact2') || is_page('contact_snow') || is_page('entry-form') || is_page('contact-finish') || is_page('entry-form-finish') ) {
     wp_enqueue_style( 'contact', get_template_directory_uri() . '/css/style-contact.css?'. date("ymdHis", filemtime( get_stylesheet_directory() . '/css/style-contact.css')) );
     wp_enqueue_style('contact_snow', get_template_directory_uri() . '/css/style-contact_snow.css?' . date("ymdHis", filemtime(get_stylesheet_directory() . '/css/style-contact_snow.css')));
     wp_enqueue_script( 'yubinbango', get_template_directory_uri() . '/js/yubinbango.js', array(), false, true );

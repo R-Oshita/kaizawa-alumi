@@ -154,7 +154,7 @@ get_header(); ?>
         また、お客様のニーズに合わせて製品を製造し、それらを手にとっていただく皆様の生活を陰ながら支えられることが当社の喜びの一つです。これからもお客様にご満足いただけるものづくりを通して、人と地域に寄り添う会社として様々なことにチャレンジしてまいります。
       </p>
       <div class="text-center btn-box">
-        <a href="<?php echo esc_url(home_url()); ?>/company" class="button-pattern1 btn-size-top">詳しく見る
+        <a href="<?php echo esc_url(home_url()); ?>/company/" class="button-pattern1 btn-size-top">詳しく見る
           <div class="button-arrow-box">
             <div class="button-arrow"></div>
           </div>
@@ -177,8 +177,8 @@ get_header(); ?>
           <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img2.jpg" alt="" class="" width="600" height="667">
         </picture>
       </div>
-      <div class="company-txtbox">
-        <p class="company__txt1">
+      <div class="service-txtbox">
+        <p class="service__txt1">
           <span class="fw-600">建材製品及び部品製造</span><br>
           集合住宅や戸建て住宅に設置される浴室のドア製品や窓製品及びそれらに関連する部品を製造しています。<br>
           <br>
@@ -186,7 +186,7 @@ get_header(); ?>
           建材製造での経験を活かし、製造業向けの労働者派遣事業を行っています。
         </p>
         <div class="text-center btn-box">
-          <a href="<?php echo esc_url(home_url()); ?>/company/" class="button-pattern1 btn-size-top">詳しく見る
+          <a href="<?php echo esc_url(home_url()); ?>/service/" class="button-pattern1 btn-size-top">詳しく見る
             <div class="button-arrow-box">
               <div class="button-arrow"></div>
             </div>

@@ -895,6 +895,9 @@ footer .accordionBtn {
 }
 
 @media all and (min-width: 768px) {
+  .footer-nav a{
+    font-size: 1rem;
+  }
   .footer-nav {
     grid-template-columns: repeat(5, 1fr);
   }
@@ -930,7 +933,7 @@ footer .accordionBtn {
 
   .footer-nav>li>a {
     border-top: none;
-    padding: 5px 28px;
+    padding: 5px 25px;
   }
 
   .footer-nav>li:last-child>a {
