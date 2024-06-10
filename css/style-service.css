@@ -21,6 +21,7 @@
     margin-bottom: 50px;
     max-width: 350px;
     margin-inline: auto;
+    padding: 0 15px;
 }
 
 .icon-card-img {
@@ -40,6 +41,11 @@
         gap: 15px;
     }
 }
+@media all and (min-width: 768px) {
+    .service-txt{
+        text-align: center;
+    }
+}
 
 @media all and (min-width: 992px) {
     .icon-container {
@@ -51,13 +57,24 @@
     }
 }
 
+@media all and (min-width: 1400px) {
+    @media all and (min-width: 1400px) {
+        .icon-card {
+            padding: 0 36px;
+        }
+    }
+
+}
+
 /* products */
 .products-sec {
     background-color: var(--bg-lightblue);
 }
-.products-table{
+
+.products-table {
     width: 100%;
 }
+
 .products-table td,
 .products-table th {
     padding: 15px 10px;
@@ -68,6 +85,7 @@
     background-color: #fff;
     border: 1px solid #c0c0c0;
 
+
 }
 
 .table-blue {
@@ -76,7 +94,7 @@
 }
 
 .products-table td:first-child {
-    width: 30%;
+    width: 27%;
     font-weight: 600;
 }
 
@@ -84,7 +102,7 @@
 
     .products-table td,
     .products-table th {
-        padding: 20px;
+        padding: 17px;
         font-size: 16px;
     }
 }

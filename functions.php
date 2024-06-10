@@ -544,64 +544,6 @@ function themeurl_func () {
 }
 add_shortcode('theme_url', 'themeurl_func');
 
-/* カスタム投稿の定義 */
-//※「イベント情報」「event」は仮に入力してあるものなので、適宜案件に応じて名前を変更してください。
-//カスタム投稿に関する記述部分を別のところにコピペしてスラッグを一括置換→こちらにコピペし直すのが無難。
-//カスタム投稿を使用しない案件では必ずカスタム投稿の定義を削除してください。
-function event_custom_post_type(){
-  $labels = array(
-    'name' => _x('イベント情報', 'post type general name'),//名前は適宜書き換えてください。
-    'singular_name' => _x('イベント情報', 'post type singular name'),
-    'add_new' => _x('新規追加', 'event'),
-    'add_new_item' => __('イベント情報'),
-    'edit_item' => __('編集'),
-    'new_item' => __('新規イベント情報'),
-    'view_item' => __('表示'),
-    'search_items' => __('項目検索'),
-    'not_found' => __('記事が見つかりません'),
-    'not_found_in_trash' => __('ゴミ箱に記事はありません'),
-    'parent_item_colon' => ''
-  );
-  $args = array(
-    'labels' => $labels,
-    'public' => true,
-    'publicly_queryable' => true,
-    'show_ui' => true,
-    'query_var' => true,
-    'capability_type' => 'post',
-    'hierarchical' => false,
-    'menu_position' => 4,
-    'show_in_rest' => true,
-    'has_archive' => true,
-    'rewrite' => array( 'slug' => 'event'),//スラッグは適宜書き換えてください。
-    'supports' => array('title','editor','revisions','thumbnail')
-  );
-  register_post_type('event',$args);
-
-  $args = array(
-    'label' => 'イベント情報のカテゴリ',//適宜書き換える
-    'public' => true,
-    'show_ui' => true,
-    'show_in_rest' => true,
-    'show_in_nav_menus' => true,
-    'show_admin_event' => true,
-    'hierarchical' => true,
-    'query_var' => true,
-    'rewrite' => array(
-      'slug' => 'event', 'with_front' => true,'hierarchical' => true
-    )
-  );
-  register_taxonomy('event_taxonomy','event',$args);
-}
-add_action('init', 'event_custom_post_type');
-
-function add_custom_rewrite_rules_event() {
-    add_rewrite_rule('event/([^0-9]+)/?$', 'index.php?event_taxonomy=$matches[1]&taxonomy=event_taxonomy', 'top');
-    add_rewrite_rule('event/([^0-9]+)/page/([^/]+)/?$', 'index.php?event_taxonomy=$matches[1]&taxonomy=event_taxonomy&paged=$matches[2]', 'top');
-  }
-add_action('init', 'add_custom_rewrite_rules_event');
-/* //カスタム投稿の定義 */
-
 /* 管理画面の記事一覧にカテゴリを表示 */
 function add_custom_column( $column ){
     global $post_type;

@@ -40,7 +40,7 @@
 
 .about-table-wrap {
     overflow-x: scroll;
-    margin-bottom: 60px;
+    margin-bottom: 82px;
 }
 
 .about-table {
@@ -55,7 +55,7 @@
 .about-table th,
 .about-table td {
     border: 1px solid #c0c0c0;
-    padding: 15px;
+    padding: 10px;
 }
 
 .about-table td {
@@ -63,11 +63,11 @@
 }
 
 .about-table th {
-    width: 30%;
+    width: 27%;
 }
 
 .about-subtd {
-    width: 35%;
+    width: 36.5%;
 }
 
 .btn-size-about {
@@ -79,21 +79,32 @@
     margin-bottom: 50px;
 }
 
-.about p{
+.about p {
     max-width: 1076px;
-    margin-inline:auto;
+    margin-inline: auto;
 }
+
 @media all and (min-width: 576px) {
     .btn-size-about {
         width: 280px;
         height: 60px;
         margin-inline: auto;
     }
+
+    .btn-size-about {
+        padding: 20px 50px 20px 50px;
+
+    }
 }
 
 @media all and (min-width: 768px) {
     .btn-box {
-        margin-bottom: 70px;
+        margin-bottom: 59px;
+    }
+
+    .about-table th,
+    .about-table td {
+        padding: 18px;
     }
 }
 

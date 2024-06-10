@@ -1,6 +1,13 @@
 @charset "utf-8";
 
 /* お問い合わせフォーム用 */
+.ttl-pattern_4 {
+  font-size: 24px;
+  letter-spacing: normal;
+}
+
+.txt-nowrap
+
 .mw_wp_form_input .confirm-message {
   display: none;
 }
@@ -233,9 +240,22 @@
   }
 }
 
+.contact-tel {
+  margin-bottom: 40px;
+}
+
+.contact-tel>.d-flex {
+  justify-content: center;
+}
+
 .contact-tel-txt {
   color: var(--base-blue);
   font-size: 32px;
+}
+
+.contact-tel-txt:hover {
+  color: var(--base-blue);
+  opacity: 1;
 }
 
 .contact-tel-time {
@@ -247,7 +267,6 @@
   max-width: 380px;
   justify-content: space-between;
   margin-inline: auto;
-  margin-bottom: 20px;
 }
 
 .contact-flow::before {
@@ -281,9 +300,22 @@
   margin-right: 15px;
 }
 
-.contact-flow__box {
-  opacity: 0.7;
+@media all and (max-width: 400px) {
+  .contact-flow {
+    max-width: 300px;
+  }
+  .contact-flow::before{
+    width: 63px;
+    left: 88px;
+  }
+  .contact-flow::after{
+    width: 63px;
+    right: 30px;
+
+  }
 }
+
+.contact-flow__box {}
 
 .contact-flow__circle {
   width: 60px;
@@ -294,6 +326,7 @@
   border-radius: 50%;
   display: grid;
   place-items: center;
+  opacity: 0.7;
 }
 
 .contact-flow__txt {
@@ -302,7 +335,43 @@
 }
 
 .contact-tel {
-  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-mt {
+  margin-top: 25px;
+}
+
+.smf-form .wp-block-button__link {
+  padding: 0;
+}
+
+.personal .ttl-pattern_4 {
+  font-size: 24px;
+  letter-spacing: normal;
+}
+
+.entry-form .ttl-pattern_2,
+.entry-form-finish .ttl-pattern_2 {
+  margin-bottom: 124px;
+}
+
+.personal dt {
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.personal dt,
+.personal dd {
+  padding-left: 17px;
+}
+
+.personal dt::before {
+  content: "■";
+  color: var(--base-blue);
+  position: absolute;
+  left: 0;
+
 }
 
 @media all and (min-width: 576px) {
@@ -314,10 +383,27 @@
   }
 
   .contact-tel-txt {
+    font-size: 45px;
+    margin-right: 20px;
+  }
+
+  .smf-form .wp-block-button__link {
+    padding: 10px 0;
+  }
+
+}
+
+@media all and (min-width: 768px) {
+  .contact-tel-txt {
     font-size: 50px;
     margin-right: 30px;
   }
+}
 
+@media all and (min-width: 1200px) {
+  .contact-tel {
+    padding-left: 144px;
+  }
 }
 
 /* フォームの調整 */
@@ -335,4 +421,30 @@
   font-size: 1rem;
   background-color: transparent;
   border: none;
+}
+
+form[data-screen="input"] .circle1,
+form[data-screen="back"] .circle1,
+form[data-screen="invalid"] .circle1 {
+  background-color: #0B71C7;
+  opacity: 1;
+}
+
+form[data-screen="confirm"] .circle2 {
+  background-color: #0B71C7;
+  opacity: 1;
+}
+
+.contact-finish .circle3,
+.entry-form-finish .circle3 {
+  background-color: #0B71C7;
+  opacity: 1;
+}
+
+.contact-html .smf-item__col--label {
+  padding-bottom: 0;
+}
+
+.contact-html.smf-item {
+  padding: unset;
 }

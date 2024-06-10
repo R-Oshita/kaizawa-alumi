@@ -5,11 +5,11 @@
       <div class="subttl josefin">SERVICE</div>
       <h2 class="ttl-pattern_2">事業内容</h2>
     </div>
-    <p class="service-txt text-center">建材製品や関連部品の製造及び製造業向けの労働者派遣事業を行っています。</p>
+    <p class="service-txt">建材製品や関連部品の製造及び製造業向けの労働者派遣事業を行っています。</p>
     <div class="text-center">
       <picture>
         <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/images/service/service-img.webp" type="image/webp">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/service/service-img.jpg" alt="" class="phirosophy-img text-center" width="700" height="300" loading="lazy">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/service/service-img.jpg" alt="" class="phirosophy-img text-center" width="1076" height="500" loading="lazy">
       </picture>
     </div>
   </div>
@@ -22,22 +22,22 @@
     </div>
     <div class="icon-container">
       <div class="icon-card">
-        <div class="text-center"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/service/division-icon1.svg" alt="" class="icon-card-img" width="140" height="140"></div>
+        <div class="text-center"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/service/division-icon1.svg" alt="" class="icon-card-img" width="166" height="166"></div>
         <p class="icon-card-ttl">浴室S折戸ライン</p>
         <p class="icon-card-txt">浴室折戸製品の部材切断・加工・組立・部品付け・検査・包装作業</p>
       </div>
       <div class="icon-card">
-        <div class="text-center"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/service/division-icon2.svg" alt="" class="icon-card-img" width="140" height="140" loading="lazy"></div>
+        <div class="text-center"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/service/division-icon2.svg" alt="" class="icon-card-img" width="166" height="166" loading="lazy"></div>
         <p class="icon-card-ttl">スイングライン</p>
         <p class="icon-card-txt">窓製品の障子及び枠の部品付け・検査作業と網戸製品の部品付け・検査・包装作業</p>
       </div>
       <div class="icon-card">
-        <div class="text-center"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/service/division-icon3.svg" alt="" class="icon-card-img" width="140" height="140" loading="lazy"></div>
+        <div class="text-center"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/service/division-icon3.svg" alt="" class="icon-card-img" width="166" height="166" loading="lazy"></div>
         <p class="icon-card-ttl">機能部品ライン</p>
         <p class="icon-card-txt">建材部品の組立及び検査・包装業務</p>
       </div>
       <div class="icon-card">
-        <div class="text-center"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/service/division-icon4.svg" alt="" class="icon-card-img" width="140" height="140" loading="lazy"></div>
+        <div class="text-center"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/service/division-icon4.svg" alt="" class="icon-card-img" width="166" height="166" loading="lazy"></div>
         <p class="icon-card-ttl">ガスケットライン</p>
         <p class="icon-card-txt">建材部品（ゴム製品）の切断・包装作業、建材製品の切断組立作業</p>
       </div>

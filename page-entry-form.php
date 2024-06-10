@@ -7,32 +7,18 @@ get_header(); ?>
 <section class="py-5 contact-form-area <?php if (is_page('contact-finish')) :  ?>contact-form-area_finish<?php endif; ?>">
   <div class="container py-lg-4">
     <div class="row justify-content-center">
-      <div class="col-12 col-md-10 col-lg-8 px-xl-5">
+      <div class="col-12 col-md-10 col-lg-8">
         <div class="ttl-pattern_2-wrap text-center">
           <div class="subttl josefin">ENTRY FORM</div>
-          <h2 class="ttl-pattern_2">エントリー入力フォーム<?php if (is_page('contact-finish')) :  ?>完了<?php endif; ?></h2>
+          <h2 class="ttl-pattern_2">エントリー<br class="d-sm-none">入力フォーム</h2>
         </div>
-        <div class="contact-tel">
+        <!-- <div class="contact-tel">
           <div class="d-flex">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/contact/tel-icon.svg" alt="" class="contact-tel-icon" width="26" height="26" loading="lazy">
-            <p class="contact-tel-txt josefin">0765-52-1793</p>
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/contact/tel-icon.svg" alt="tel:0765-52-1793" class="contact-tel-icon" width="26" height="26" loading="lazy">
+            <a href="tel:0765-52-1793" class="contact-tel-txt josefin">0765-52-1793</a>
           </div>
           <p class="contact-tel-time">平日 9:00〜17:00</p>
-        </div>
-        <div class="contact-flow d-flex">
-          <div class="contact-flow__box">
-            <div class="contact-flow__circle josefin">01</div>
-            <p class="contact-flow__txt">入力</p>
-          </div>
-          <div class="contact-flow__box">
-            <div class="contact-flow__circle josefin">02</div>
-            <p class="contact-flow__txt">確認</p>
-          </div>
-          <div class="contact-flow__box">
-            <div class="contact-flow__circle josefin">03</div>
-            <p class="contact-flow__txt">完了</p>
-          </div>
-        </div>
+        </div> -->
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
             <?php the_content(); ?>
         <?php endwhile;
@@ -74,7 +60,7 @@ get_header(); ?>
   </div>
 </section>
 
-<?php if (is_page('contact')||is_page('entry-form')) : ?>
+<?php if (is_page('contact') || is_page('entry-form')) : ?>
   <!-- Yubinbangoを使うための処理（ボタン無し） --><!--
     <script>
       let formelements = document.querySelectorAll('.snow-monkey-form');

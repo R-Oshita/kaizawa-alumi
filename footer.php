@@ -1,7 +1,7 @@
     </main>
     </div><!-- header-and-main -->
     <footer>
-      <?php if (is_front_page()): ?>
+      <?php if (is_front_page()) : ?>
         <section class="py-5 cta-section">
           <div class="container">
             <div class="cta-box">
@@ -21,7 +21,7 @@
                 </div>
                 <div>
                   <p class="cta-contact__txt1"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/common/CTA-phone-icon.svg" alt="">お電話でのお問い合わせ</p>
-                  <a href="" class="cta-tel-btn"><span class="cta-tel-btn_inner josefin">0765-52-1793</span></a><br>
+                  <a href="tel:0765-52-1793" class="cta-tel-btn"><span class="cta-tel-btn_inner josefin">0765-52-1793</span></a><br>
                   <p class="tel-time">（平日 9:00〜17:00）</p>
                 </div>
               </div>
@@ -51,7 +51,7 @@
         </div>
         <div class="footer-copy-wrap">
           <div class="container footer-copy">
-            <span class="pe-sm-3">COPYRIGHT © 有限会社 開澤アルミ</span><br class="d-block d-sm-none">All Rights Reserved.
+            <span class="pe-sm-1">COPYRIGHT © 有限会社 開澤アルミ</span><br class="d-block d-sm-none">All Rights Reserved.
           </div>
         </div>
       </div>

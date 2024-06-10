@@ -60,13 +60,13 @@ main {
   margin-top: 42.5px;
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 768px) {}
+
+@media all and (min-width: 992px) {
   main {
     margin-top: 80px;
   }
 }
-
-@media all and (min-width: 992px) {}
 
 /* //mainタグ上の余白 */
 
@@ -140,7 +140,7 @@ main {
 .button-arrow-box {
   position: absolute;
   right: 20px;
-  top: 50%;
+  top: 48%;
   transform: translateY(-50%);
 }
 
@@ -230,7 +230,7 @@ main {
 .head-ttl-wrap {
   padding: 2rem 0px;
   color: #fff;
-  height: calc(300/1080*100svh);
+  height: 300px;
   display: flex;
   align-items: center;
 }
@@ -289,6 +289,16 @@ main {
   }
 }
 
+@media all and (max-width: 400px) {
+  .head-ttl{
+    font-size: 1.25rem;
+    max-width: 45%;
+  }
+  .head-subttl{
+    max-width: 35%;
+  }
+}
+
 /* //下層FV */
 
 /* パンくず */
@@ -299,6 +309,9 @@ main {
 
 .breadcrumb {
   margin-bottom: 0;
+}
+.breadcrumb a{
+  color: #333;
 }
 
 .breadcrumb ul {
@@ -380,8 +393,9 @@ main {
 .ttl-pattern_2-wrap .subttl {
   font-size: 1.25rem;
   font-weight: 400;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
   color: var(--base-blue);
+  letter-spacing: 0.09em;
 }
 
 .ttl-pattern_2, .blockeditor-area h1 {
@@ -903,7 +917,7 @@ a.three-pr-inner:hover {
 
   .cta-content {
     justify-content: space-between;
-    gap: 50px;
+    gap: 43px;
   }
 
   .cta-contact-btn_inner {
@@ -1645,7 +1659,6 @@ a {
 
 a:hover {
   opacity: .7;
-  color: #0066C0;
   text-decoration: none;
 }
 

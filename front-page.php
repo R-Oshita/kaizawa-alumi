@@ -215,7 +215,7 @@ get_header(); ?>
       そのため人材育成に注力し個人の成長から組織力の向上を図ります。また社内での研修も充実しており、教育体制にも力を注いでいます。<br>
       すべての社員が働き易い職場環境を目指していますので、ぜひあなたも私たちと一緒にチャレンジしませんか？</p>
     <div class="text-center btn-box">
-      <a href="<?php echo esc_url(home_url()); ?>/company/" class="button-pattern1 btn-size-top">詳しく見る
+      <a href="<?php echo esc_url(home_url()); ?>/recruit/" class="button-pattern1 btn-size-top">詳しく見る
         <div class="button-arrow-box">
           <div class="button-arrow"></div>
         </div>

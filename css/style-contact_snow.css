@@ -6,6 +6,8 @@
   margin-bottom: 2rem;
 }
 
+
+
 .snow-monkey-form[data-screen="input"] .confirm-message,
 .snow-monkey-form[data-screen="back"] .confirm-message {
   display: none;
@@ -20,10 +22,21 @@
 .contact-tel-wrap {
   margin-bottom: 2rem;
 }
+.contact-tel-txt{
+  letter-spacing: 0.09em;
+}
 
 @media all and (min-width: 576px) {}
 
-@media all and (min-width: 768px) {}
+@media all and (min-width: 768px) {
+  .contact-form-area {
+    margin-top: 40px;
+  }
+
+  .contact-tel{
+    margin-top: 80px;
+  }
+}
 
 @media all and (min-width: 992px) {}
 
@@ -321,23 +334,24 @@
   opacity: .7;
 }
 
-.bg-blue{
+.bg-blue {
   padding: 30px;
   background-color: var(--bg-lightblue);
 }
 
-.personal-inner{
+.personal-inner {
   max-width: 856px;
-  margin-inline:auto;
+  margin-inline: auto;
 }
+
 @media all and (min-width: 576px) {
-  .contact-txt1{
+  .contact-txt1 {
     text-align: center;
   }
 }
 
 @media all and (min-width: 768px) {
-  .bg-blue{
+  .bg-blue {
     padding: 60px;
   }
 }
