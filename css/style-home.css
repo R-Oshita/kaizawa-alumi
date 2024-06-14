@@ -6,7 +6,7 @@ a:hover {
 
 /* topの共通項目 */
 .top-ttl {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 300;
   color: var(--base-blue);
   text-align: center;
@@ -15,7 +15,7 @@ a:hover {
 }
 
 .top-subttl {
-  font-size: 16px;
+  font-size: 1rem;
   color: #333;
   text-align: center;
 }
@@ -50,13 +50,13 @@ a:hover {
 
 @media all and (min-width: 768px) {
   .top-ttl {
-    font-size: 50px;
+    font-size: 3.125rem;
     text-align: left;
   }
 
   .top-subttl {
     text-align: left;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .button-pattern1 {
@@ -71,7 +71,7 @@ a:hover {
 
 @media all and (min-width: 992px) {
   .top-ttl {
-    font-size: 60px;
+    font-size: 3.75rem;
 
   }
 
@@ -175,7 +175,7 @@ a:hover {
   left: 10px;
   height: 51.39px;
   width: 8.82px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #fff;
   transform: rotate(-90deg);
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.38);
@@ -570,7 +570,7 @@ a:hover {
 }
 
 .recruit-container h3 {
-  font-size: 20px;
+  font-size: 1.25rem;
   margin-top: 30px;
 }
 
@@ -607,7 +607,7 @@ a:hover {
 
   .recruit-container h3 {
     margin-top: 57px;
-    font-size: 26px;
+    font-size: 1.625rem;
   }
 
   .recruit-txt {

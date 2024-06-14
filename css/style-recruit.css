@@ -75,6 +75,10 @@
 
 }
 
+.btn-size-about:hover{
+    color: #fff;
+}
+
 .btn-box {
     margin-bottom: 50px;
 }

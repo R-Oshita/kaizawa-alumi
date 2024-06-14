@@ -370,7 +370,7 @@ header .accordionBtn.chlidnav-opened::after {
 }
 
 .header-tel__time {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .header-contact {
@@ -440,16 +440,16 @@ header .accordionBtn.chlidnav-opened::after {
   }
 
   .header-tel__number {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin-bottom: 0;
   }
 
   .header-tel__time {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 
   .header-contact {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .header-tel__number img {
@@ -735,12 +735,12 @@ header .accordionBtn.chlidnav-opened::after {
   }
 
   .header-tel__number {
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 0;
   }
 
   .header-tel__time {
-    font-size: 14px;
+    font-size: .875rem;
   }
 }
 

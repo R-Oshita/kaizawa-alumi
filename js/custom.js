@@ -266,61 +266,6 @@ for (let i = 0; i < accordionHead.length; i++) {
   }, false);
 }
 
-//ヘッダーの検索窓（検索窓使用しない場合は削除してください。）↓↓
-document.addEventListener('click', (e) => {
-  if(!e.target.closest('#search-btn-inner')) {
-    let searchwrap = document.getElementById('search-btn-inner');
-    searchwrap.classList.remove('searchactive');
-  } else {
-    let searchwrap = document.getElementById('search-btn-inner');
-    searchwrap.classList.add('searchactive');
-    document.getElementById('s').focus();
-  }
-})
-//ヘッダーの検索窓（検索窓使用しない場合は削除してください。）↑↑
-
-//上から降りてくるタイプのグローバルナビ（スクロール後用ヘッダー使用しない場合は削除してください）↓↓
-const headerlinks_F = document.querySelectorAll("#global-navi_fixed a");
-const headerlinks_notF1 = document.querySelectorAll("#pc-top-band a");
-const headerlinks_notF2 = document.querySelectorAll("#global-navi a");
-let searchinput = document.getElementById('s');
-let searchbtn = document.getElementById('searchsubmit');
-for (let i = 0; i < headerlinks_F.length; i++) {
-  headerlinks_F[i].setAttribute("tabindex", "-1");
-}
-window.addEventListener('scroll', function () {
-  let fixnav = document.getElementById('global-navi_fixed');
-  let navheight = document.getElementById('header').offsetHeight;
-  let scrollTop = window.pageYOffset;
-  if (scrollTop > navheight + 10) { 
-    fixnav.classList.add("global-navi_fadein");
-    for (let i = 0; i < headerlinks_F.length; i++) {
-      headerlinks_F[i].setAttribute("tabindex", "0");
-    }
-    for (let i = 0; i < headerlinks_notF1.length; i++) {
-      headerlinks_notF1[i].setAttribute("tabindex", "-1");
-    }
-    for (let i = 0; i < headerlinks_notF2.length; i++) {
-      headerlinks_notF2[i].setAttribute("tabindex", "-1");
-    }
-    searchinput.setAttribute("tabindex", "-1");
-    searchbtn.setAttribute("tabindex", "-1");
-  } else {
-    fixnav.classList.remove("global-navi_fadein");
-    for (let i = 0; i < headerlinks_F.length; i++) {
-      headerlinks_F[i].setAttribute("tabindex", "-1");
-    }
-    for (let i = 0; i < headerlinks_notF1.length; i++) {
-      headerlinks_notF1[i].setAttribute("tabindex", "0");
-    }
-    for (let i = 0; i < headerlinks_notF2.length; i++) {
-      headerlinks_notF2[i].setAttribute("tabindex", "0");
-    }
-    searchinput.setAttribute("tabindex", "0");
-    searchbtn.setAttribute("tabindex", "0");
-  }
-});
-//上から降りてくるタイプのグローバルナビ（スクロール後用ヘッダー使用しない場合は削除してください）↑↑
 
 //フェードイン等スクロール発火エフェクト用
 window.addEventListener("DOMContentLoaded", () => {

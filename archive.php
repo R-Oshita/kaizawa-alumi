@@ -39,7 +39,7 @@
             $args = array(
               'paged' => $paged,
               'post_type' => array('post'),
-              'posts_per_page' => 2,
+              'posts_per_page' => 10,
             );
             $wp_query = new WP_Query($args);
             if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();

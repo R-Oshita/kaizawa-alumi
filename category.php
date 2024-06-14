@@ -7,7 +7,7 @@
               $current_cat = get_queried_object();
               $cat_name = $current_cat->name;
               $cat_slug = $current_cat->category_nicename;
-              echo '<h2 class="ttl-pattern_4">カテゴリ：'.$cat_name.'</h2>';
+              echo '<h2 class="archive-ttl">カテゴリ：'.$cat_name.'</h2>';
             ?>
             <ul class="postlist-line">
               <?php
@@ -15,7 +15,7 @@
                   'paged' => $paged,
                   'post_type' => array('post'),
                   'category_name' => $cat_slug, 
-                  'posts_per_page' => 4,
+                  'posts_per_page' => 10,
                 );
                 $wp_query = new WP_Query($args);
                 if ($wp_query->have_posts()): while($wp_query->have_posts()): $wp_query->the_post();
