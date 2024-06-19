@@ -4,18 +4,18 @@ Template Name: お問い合わせスノーモンキー用
 */
 get_header(); ?>
 
-<section class="py-5 contact-form-area <?php if (is_page('contact-finish')) :  ?>contact-form-area_finish<?php endif; ?>">
-  <div class="container py-lg-4">
+<section class="py-5 contact-form-area">
+  <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-md-10 col-lg-8">
         <div class="ttl-pattern_2-wrap text-center">
-          
+
           <div class="subttl josefin">CONTACT</div>
           <h2 class="ttl-pattern_2"><?php the_title(); ?></h2>
         </div>
         <div class="contact-tel">
           <div class="d-flex justify-content-center">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/contact/tel-icon.svg" alt="" class="contact-tel-icon" width="26" height="26" loading="lazy">
+            <!-- <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/contact/tel-icon.svg" alt="" class="contact-tel-icon" width="26" height="26" loading="lazy"> -->
             <a href="tel:0765-52-1793" class="contact-tel-txt josefin">0765-52-1793</a>
           </div>
           <p class="contact-tel-time">平日 9:00〜17:00</p>
@@ -25,7 +25,7 @@ get_header(); ?>
         <?php endwhile;
         endif; ?>
         <p class="contact-txt1">ご入力いただきました個人情報の取扱いに関しては、<br class="d-none d-sm-block">
-          下記「個人情報の取扱いに関する方針」に則り、適切かつ安全に管理いたします。</p>
+          下記「個人情報の取扱いに関する方針」に則り、<br class="d-none d-sm-block d-lg-none">適切かつ安全に管理いたします。</p>
 
       </div>
     </div>
@@ -36,8 +36,10 @@ get_header(); ?>
         <h2 class="ttl-pattern_4">個人情報の取扱いに関する方針</h2>
         <dl>
           <dt>個人情報の利用目的</dt>
-          <dd>ご入力いただいた個人情報は、お問合せのために利用いたします。</dd>
-          <dd>ご本人へのご連絡(電話、電子メール、資料送付等)</dd>
+          <dd>ご入力いただいた個人情報は、お問合せのために利用いたします。<br>
+            ご本人へのご連絡(電話、電子メール、資料送付等)
+          </dd>
+
           <dt>個人情報の第三者提供について</dt>
           <dd>ご本人の同意がある場合または法令に基づく場合を除き、取得した個人情報を第三者に提供することはありません。</dd>
           <dt>個人情報の取扱いの委託について</dt>

@@ -26,7 +26,7 @@ header {
 }
 
 .logo-wrap {
-  padding: 3px 15px;
+  padding: 7px 15px;
 }
 
 .logo-wrap img {
@@ -62,7 +62,7 @@ header {
   width: 38px;
   height: 38px;
   position: fixed;
-  top: 2px;
+  top: 6px;
   right: 10px;
   background-color: transparent;
   border: none;
@@ -353,11 +353,16 @@ header .accordionBtn.chlidnav-opened::after {
 
 .header-tel {
   margin-top: 20px;
-  margin-bottom: 43px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+
 }
 
 .header-tel__number {
   font-weight: bold;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 25px 1fr;
 }
 
 .header-tel__number:hover {
@@ -367,17 +372,51 @@ header .accordionBtn.chlidnav-opened::after {
 
 .header-tel__number img {
   margin-right: 5px;
+  vertical-align: middle;
+}
+
+.header-tel__txt {
+  margin-bottom: 0;
 }
 
 .header-tel__time {
   font-size: 0.75rem;
+  font-weight: middle;
 }
 
 .header-contact {
   background-color: var(--base-blue);
   color: #fff;
-  padding: 28px 31px;
+  padding: 16px 31px;
+  position: relative;
+  font-weight: 700;
 
+}
+
+.header-contact::before,
+.header-contact::after {
+  content: "";
+  width: 7px;
+  height: 1px;
+  display: inline-block;
+  background: #ffffff;
+  position: absolute;
+  right: 13px;
+}
+
+.header-contact::before {
+  top: calc(50% - 2px);
+  /* 数値は微調整してください */
+  transform: rotate(45deg);
+  /* 45度回転させる */
+
+}
+
+.header-contact::after {
+  bottom: calc(50% - 3px);
+  /* 数値は微調整してください */
+  transform: rotate(-45deg);
+  /* -45度回転させる */
 }
 
 .header-contact:hover {
@@ -386,14 +425,20 @@ header .accordionBtn.chlidnav-opened::after {
 
 .header-contact img {
   margin-right: 5px;
+  margin-bottom: 3px;
 }
-.header-cta{
+
+.header-cta {
   max-width: 200px;
-  margin-inline:auto;
+  margin-inline: auto;
+
 }
 
 
 @media all and (min-width: 992px) {
+  .header-tel {
+    margin-left: 0;
+  }
 
   .logo-wrap {
     padding: 10px 15px 10px 5.21%;
@@ -448,9 +493,6 @@ header .accordionBtn.chlidnav-opened::after {
     font-size: 0.75rem;
   }
 
-  .header-contact {
-    font-size: 1.125rem;
-  }
 
   .header-tel__number img {
     width: 20px;
@@ -458,14 +500,14 @@ header .accordionBtn.chlidnav-opened::after {
   }
 
   .header-contact {
-    padding: 28px 15px;
+    padding: 28px 30px;
     width: auto;
   }
 
-.header-cta{
-  max-width: none;
-  display: flex;
-}
+  .header-cta {
+    max-width: none;
+    display: flex;
+  }
 
   /*
   .navbar-nav li.menu-item.current-menu-item > a,
@@ -516,7 +558,7 @@ header .accordionBtn.chlidnav-opened::after {
   }
 
   .logo-wrap img {
-    width: 220px;
+    width: 190px;
   }
 
   /* 上から降りてくるヘッダー */
@@ -717,12 +759,29 @@ header .accordionBtn.chlidnav-opened::after {
   .navbar-nav>li>.sub-menu>li .sub-menu li a {
     padding: 3px 15px 3px 35px;
   }
+
+
+
+  .header-contact::before {
+    top: calc(50% - 4px);
+  }
+
+  .header-contact::after {
+    bottom: calc(50% - 2px);
+  }
+
 }
 
 @media all and (min-width: 1200px) {
+  .logo-wrap img {
+    width: 220px;
+  }
+
   .header-contact {
     padding: 28px 40px;
+    font-size: 1.125rem;
   }
+
 
   .navbar-nav>li.menu-item>a {
     font-size: 1rem;
@@ -730,7 +789,7 @@ header .accordionBtn.chlidnav-opened::after {
   }
 
   .navbar-nav>li.menu-item {
-    padding: 0 25px;
+    padding: 0 15px;
 
   }
 
@@ -741,6 +800,18 @@ header .accordionBtn.chlidnav-opened::after {
 
   .header-tel__time {
     font-size: .875rem;
+  }
+
+  .header-contact::before,
+  .header-contact::after {
+    right: 18px;
+  }
+}
+
+@media all and (min-width: 1400px) {
+  .navbar-nav>li.menu-item {
+    padding: 0 25px;
+
   }
 }
 
@@ -887,7 +958,6 @@ footer .accordionBtn {
   background: #444;
   color: #fff;
   padding-top: 10px;
-  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;

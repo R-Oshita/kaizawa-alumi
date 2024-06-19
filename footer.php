@@ -2,7 +2,7 @@
     </div><!-- header-and-main -->
     <footer>
       <?php if (is_front_page()) : ?>
-        <section class="py-5 cta-section">
+        <section class="cta-section lazyload">
           <div class="container">
             <div class="cta-box">
               <div class="ttx-box">
@@ -33,7 +33,7 @@
         <div class="container">
           <div class="footer-content">
             <div class="footer-content-menu-info">
-              <a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/common/footer-logo.png" alt="<?php bloginfo('name'); ?>" loading="lazy" width="72" height="70" class="footer-logo"></a>
+              <a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/common/footer-logo.svg" alt="<?php bloginfo('name'); ?>" loading="lazy" width="72" height="70" class="footer-logo"></a>
 
             </div>
             <div class="footer-content-menu">

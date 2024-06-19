@@ -6,13 +6,13 @@
       <h2 class="ttl-pattern_2">代表メッセージ</h2>
     </div>
     <p class="message-txt">
-      有限会社 開澤アルミは昭和34年の創業以来、お客様や従業員をはじめ多くの皆様に支えられ事業を継続してまいりました。<br>
-      <span class="fw-600">経営理念である「誠意」のもと、常に相手の立場にたって行動する。</span><br>
-      これはお客様に対してはもちろんのこと、弊社で働く皆様に対しても同様であり、<br>
-      働き易い環境・働き甲斐のある職場作りはより良いモノづくりをおこなう上で重要な要素であると考えています。<br>
-      会社都合の人材育成ではなく個人の成長が組織を強くし、会社を育てる。<br>
-      その結果、より良いモノづくりができ、お客様の満足や喜びに繋がる好循環を生み出すと信じています。
+      当社は昭和34年の創業以来、多くの皆様の支えにより成長してまいりました。<br>
+      社員一人ひとりの努力と、お取引先の皆様のご支援があってこそ、<br class="d-none d-md-block d-lg-none">今があるのだと深く感謝しております。<br>
+      私たちは「<span class="fw-700">人材こそが、企業における最大の財産である</span>」と考えています。<br>働き甲斐のある職場、働き易い環境作りは<br class="d-none d-md-block d-lg-none">より良いモノづくりをおこなう上での重要な要素であり、<br class="d-none d-md-block">個々の成長が組織を強くし、会社を育て、<br class="d-none d-md-block d-lg-none">ひいてはお客様への更なる価値提供に繋がると信じています。<br>
+      今後もお客様と喜びを共有し、皆さまとともに成長し続ける企業を目指し<br class="d-none d-md-block d-lg-none">取り組んでまいります。<br>
+      皆様の引き続きのご支援とご指導を賜りますようお願い申し上げます。
     </p>
+
   </div>
 </section>
 <section class="philosophy sec">
@@ -25,10 +25,8 @@
       <h3 class="ttl-pattern_h3">経営理念</h3>
       <p class="philosophy-ttl text-center">「 誠　意 」</p>
       <div class="text-center">
-        <picture>
-          <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/images/company/philosophy-img1.webp" type="image/webp">
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/company/philosophy-img1.jpg" alt="" class="phirosophy-img text-center" width="700" height="300" loading="lazy">
-        </picture>
+
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/company/philosophy-img1.jpg" alt="" class="phirosophy-img text-center" width="700" height="300" loading="lazy">
       </div>
 
       <p class="philosophy-txt">「誠意」の経営理念のもと、常に相手の立場にたって行動しています。常に新しいことにチャレンジし、時には失敗してもその気持ちを忘れず、挑戦し続ける姿勢を大切にしています。また、お客様のニーズに合わせて製品を製造し、それを手に取っていただき、陰ながら皆さんの生活を支えられることが当社の喜びの一つです。これからもお客様にご満足いただけるような製品を作っていき、地域にも貢献出来る、人に寄り添う会社として様々なことにチャレンジを続けてまいります。</p>
@@ -56,7 +54,7 @@
     </div>
   </div>
 </section>
-<section class="profile sec">
+<section class="profile sec lazyload">
   <div class="container">
     <div class="ttl-pattern_2-wrap text-center">
       <div class="subttl josefin">PROFILE</div>

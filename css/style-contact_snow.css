@@ -22,8 +22,13 @@
 .contact-tel-wrap {
   margin-bottom: 2rem;
 }
-.contact-tel-txt{
+
+.contact-tel-txt {
   letter-spacing: 0.09em;
+}
+
+.contact-form-area {
+  margin-bottom: 57px;
 }
 
 @media all and (min-width: 576px) {}
@@ -31,9 +36,10 @@
 @media all and (min-width: 768px) {
   .contact-form-area {
     margin-top: 40px;
+
   }
 
-  .contact-tel{
+  .contact-tel {
     margin-top: 80px;
   }
 }
@@ -332,28 +338,6 @@
 
 .smf-button-control__control:hover {
   opacity: .7;
-}
-
-.bg-blue {
-  padding: 30px;
-  background-color: var(--bg-lightblue);
-}
-
-.personal-inner {
-  max-width: 856px;
-  margin-inline: auto;
-}
-
-@media all and (min-width: 576px) {
-  .contact-txt1 {
-    text-align: center;
-  }
-}
-
-@media all and (min-width: 768px) {
-  .bg-blue {
-    padding: 60px;
-  }
 }
 
 @media all and (min-width: 992px) {}

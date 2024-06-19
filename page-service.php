@@ -7,10 +7,9 @@
     </div>
     <p class="service-txt">建材製品や関連部品の製造及び製造業向けの労働者派遣事業を行っています。</p>
     <div class="text-center">
-      <picture>
-        <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/images/service/service-img.webp" type="image/webp">
+ 
         <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/service/service-img.jpg" alt="" class="phirosophy-img text-center" width="1076" height="500" loading="lazy">
-      </picture>
+
     </div>
   </div>
 </section>

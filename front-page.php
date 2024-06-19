@@ -8,15 +8,14 @@ get_header(); ?>
     <div class="fv-bg"></div>
     <div class="fv-imgbox">
 
-      <picture>
-        <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/fv.webp" type="image/webp">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/fv.jpg" alt="" class="" width="1820" height="950">
-      </picture>
+
+      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/fv.jpg" alt="" class="" width="1820" height="950">
+
       <div class="container">
         <div class="fv-txtbox">
           <p class="fv-txt1 josefin">An enterprise that embraces people and communities,<br>
             growing together with people.</p>
-          <p class="fv-txt2 fw-600">
+          <p class="fv-txt2 fw-700">
             人と地域に寄り添い<br>
             人とともに成長する企業へ
           </p>
@@ -26,7 +25,7 @@ get_header(); ?>
 
 
     <div class="scrolldown1">
-      <p class="scrolldown1-txt fw-600">SCROLL</p><span></span>
+      <p class="scrolldown1-txt fw-700">SCROLL</p><span></span>
     </div>
   </div>
   </div>
@@ -142,11 +141,10 @@ get_header(); ?>
       <div class="top-subttl">会社案内</div>
 
     </div>
-    <div class="company-imgbox mb-2">
-      <picture>
-        <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img1.webp" type="image/webp">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img1.jpg" alt="" class="" width="600" height="667">
-      </picture>
+    <div class="company-imgbox mb-4">
+
+      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img1.jpg" alt="" class="" width="600" height="667">
+
     </div>
     <div class="company-txtbox">
       <p class="company__txt1">
@@ -171,18 +169,17 @@ get_header(); ?>
         <h2 class="top-ttl josefin">SERVICE</h2>
         <div class="top-subttl">事業案内</div>
       </div>
-      <div class="service-imgbox mb-2">
-        <picture>
-          <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img2.webp" type="image/webp">
-          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img2.jpg" alt="" class="" width="600" height="667">
-        </picture>
+      <div class="service-imgbox mb-4">
+
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img2.jpg" alt="" class="" width="600" height="667">
+
       </div>
       <div class="service-txtbox">
         <p class="service__txt1">
-          <span class="fw-600">建材製品及び部品製造</span><br>
+          <span class="fw-700">建材製品及び部品製造</span><br>
           集合住宅や戸建て住宅に設置される浴室のドア製品や窓製品及びそれらに関連する部品を製造しています。<br>
           <br>
-          <span class="fw-600">労働者派遣事業</span><br>
+          <span class="fw-700">労働者派遣事業</span><br>
           建材製造での経験を活かし、製造業向けの労働者派遣事業を行っています。
         </p>
         <div class="text-center btn-box">
@@ -200,9 +197,10 @@ get_header(); ?>
 <section class="recruit">
   <div class="recruit-imgbox">
     <picture>
-      <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img3.webp" type="image/webp">
-      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img3.jpg" alt="" class="" width="1920" height="574">
+      <source media="(max-width: 768px)" srcset="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img3-sp.jpg">
+      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/top/top-img3.jpg" alt="" width="1920" height="574">
     </picture>
+
   </div>
   <div class="container bg-white recruit-container">
 
@@ -210,7 +208,7 @@ get_header(); ?>
       <h2 class="top-ttl josefin">RECRUIT</h2>
       <div class="top-subttl">採用情報</div>
     </div>
-    <h3 class="mb-4 fw-600 text-center">一人ひとりが主役です。</h3>
+    <h3 class="mb-4 fw-700 text-center">一人ひとりが主役です。</h3>
     <p class="recruit-txt">私たちは社員一人ひとりが技術や経験、人間性を高めていくことでお客様の満足につながると信じています。<br>
       そのため人材育成に注力し個人の成長から組織力の向上を図ります。また社内での研修も充実しており、教育体制にも力を注いでいます。<br>
       すべての社員が働き易い職場環境を目指していますので、ぜひあなたも私たちと一緒にチャレンジしませんか？</p>

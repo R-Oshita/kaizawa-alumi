@@ -166,14 +166,15 @@ main {
 
 .button-arrow::before {
   display: block;
-  background-color: #fff;
   width: 20px;
   height: 20px;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
+  background-image: url(../images/common/blue-arrow-icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
 }
 
-.button-arrow::after {
+/* .button-arrow::after {
   display: block;
   left: 7px;
   top: 2px;
@@ -183,7 +184,7 @@ main {
   border-right: 1px solid var(--base-blue);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
-}
+} */
 
 /* //ボタン */
 
@@ -230,7 +231,7 @@ main {
 .head-ttl-wrap {
   padding: 2rem 0px;
   color: #fff;
-  height: 300px;
+  height: 150px;
   display: flex;
   align-items: center;
 }
@@ -268,6 +269,10 @@ main {
 }
 
 @media all and (min-width: 768px) {
+  .head-ttl-wrap {
+    height: 300px;
+  }
+
   .head-subttl::after {
     top: 10px;
   }
@@ -795,10 +800,16 @@ a.three-pr-inner:hover {
   color: #fff;
 }
 
-.cta-section {
+.cta-section.lazyloaded {
   background-image: url(../images/top/cta-bg.jpg);
+}
+
+.cta-section {
+
   background-size: cover;
   margin-top: 77px;
+  padding-top: 50px;
+  padding-bottom: 80px;
 }
 
 .cta-box {
@@ -810,7 +821,7 @@ a.three-pr-inner:hover {
 .cta-catchcopy {
   font-size: 0.75rem;
   font-weight: 700;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-bottom: 40px;
 }
 
@@ -900,7 +911,7 @@ a.three-pr-inner:hover {
 
   .cta-catchcopy {
     font-size: 1.125rem;
-    margin-top: 67px;
+    margin-top: 60px;
   }
 
   .btn-size-cta {
@@ -937,6 +948,8 @@ a.three-pr-inner:hover {
   }
 
   .cta-section {
+    padding-top: 56px;
+    padding-bottom: 60px;
     margin-top: 127px;
   }
 }
@@ -1013,7 +1026,7 @@ a.three-pr-inner:hover {
 .postlist-simple-items::after {
   content: "";
   width: 7px;
-  height: 1px;
+  height: 2px;
   display: inline-block;
   border-radius: 2px;
   background: var(--base-blue);
@@ -1022,12 +1035,12 @@ a.three-pr-inner:hover {
 }
 
 .postlist-simple-items::before {
-  top: calc(50% - 6px);
+  top: calc(50% - 4px);
   transform: rotate(45deg);
 }
 
 .postlist-simple-items::after {
-  bottom: calc(50% - 0px);
+  bottom: calc(50% - 2px);
   transform: rotate(-45deg);
 }
 
@@ -1220,12 +1233,11 @@ a.three-pr-inner:hover {
   position: absolute;
   top: 50%;
   left: 59%;
-  transform: translateY(-50%) translateX(-50%) rotate(-45deg);
-  -webkit-transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+  transform: translateY(-50%) translateX(-50%) rotate(-90deg);
+  -webkit-transform: translateY(-50%) translateX(-50%) rotate(-90deg);
   width: 8px;
   height: 8px;
-  border-top: 1px solid #666;
-  border-left: 1px solid #666;
+
 }
 
 .page-numbers.next::before {
@@ -1233,12 +1245,11 @@ a.three-pr-inner:hover {
   position: absolute;
   top: 50%;
   left: 41%;
-  transform: translateY(-50%) translateX(-50%) rotate(45deg);
-  -webkit-transform: translateY(-50%) translateX(-50%) rotate(45deg);
+  transform: translateY(-50%) translateX(-50%) rotate(-90deg);
+  -webkit-transform: translateY(-50%) translateX(-50%) rotate(-90deg);
   width: 8px;
   height: 8px;
-  border-top: 1px solid #666;
-  border-right: 1px solid #666;
+
 }
 
 /* //投稿のページネーション */

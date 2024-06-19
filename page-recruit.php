@@ -3,13 +3,11 @@
   <div class="container">
     <div class="ttl-pattern_2-wrap text-center">
       <div class="subttl josefin">SLOGAN</div>
-      <h2 class="ttl-pattern_2">一人ひとりが主役です。</h2>
+      <h2 class="ttl-pattern_2">一人ひとりが<span class="d-inline-block">主役です。</span></h2>
     </div>
     <div class="text-center">
-      <picture>
-        <source srcset="<?php echo esc_url(get_template_directory_uri()); ?>/images/recruit/slogan-img1.webp" type="image/webp">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/recruit/slogan-img1.jpg" alt="" class="phirosophy-img text-center" width="1076" height="500" loading="lazy">
-      </picture>
+
+      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/recruit/slogan-img1.jpg" alt="" class="phirosophy-img text-center" width="1076" height="500" loading="lazy">
     </div>
     <p class="slogan-txt">私たちは、社員一人の人間が技術や人間性を高めていくことでお客様の満足につながると信じています。そのため、人材育成に注力し個人の成長から組織力の向上を図ります。また、社内での研修も充実しており、教育体制も万全。<br>
       すべての社員が働き易い職場環境を目指していますので、ぜひあなたも私たちと一緒にチャレンジしませんか？</p>
@@ -22,7 +20,7 @@
       <h2 class="ttl-pattern_2">応募者の方へ</h2>
     </div>
 
-    <p class="message-txt">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+    <p class="message-txt">有限会社 開澤アルミは、製造業の請負企業として、多くの製品製造に携わってまいりました。<br>当社の原動力は、現場で日々努力を続ける社員一人ひとりの力によるものです。<br>だからこそ、私たちは「頑張る人」を全力で応援し、成長できる環境を提供することに力を注いでいます。</p>
   </div>
 </section>
 <section class="about sec">
@@ -49,8 +47,8 @@
           </tr>
           <tr>
             <th class="about-gray">仕事紹介</th>
-            <td class="fw-600 about-subtd">窓製品製造における障子及び枠の部品付け・検査・包装業務</td>
-            <td class="fw-600">浴室ドア（折戸）製品製造における切断・加工・部品付け・検査業務（設備オペレーター業務含む）・包装業務</td>
+            <td class="fw-700 about-subtd">窓製品製造における障子及び枠の部品付け・検査・包装業務</td>
+            <td class="fw-700">浴室ドア（折戸）製品製造における切断・加工・部品付け・検査業務（設備オペレーター業務含む）・包装業務</td>
           </tr>
           <tr>
             <th class="about-gray">勤務時間</th>
@@ -116,7 +114,7 @@
         </div>
       </a>
     </div>
-    <p class="fw-600 mb-1">採用時お預かりする個人情報の取扱いについて</p>
+    <p class="fw-700 mb-1">採用時お預かりする個人情報の取扱いについて</p>
     <p>当社の採用募集にご応募されるにあたって、ご提出いただく個人情報（履歴書等）につきましては、 採用業務に関してのみ利用し、それ以外には利用いたしません。 採用業務の終了にともない、お預かりした情報は速やかに破棄させていただきます。 なお、当社に採用となった場合は社員情
       報として利用させていただきます。</p>
   </div>

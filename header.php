@@ -11,9 +11,9 @@
       body_element.style.visibility = 'visible';
     }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" media="print" onload="this.media='all'" />
   <?php wp_head(); ?>
   <script>
     console.log("")
@@ -73,17 +73,18 @@
                 );
                 wp_nav_menu($args);
                 ?>
-            
-                  <div class="header-cta">
-                    <div class="header-tel">
-                      <a href="tel:0765-52-1793" class="header-tel__number text-blue mb-2 mb-lg-0">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/common/header-phone-icon.svg" alt="" class="" width="15" height="15" loading="lazy">0765-52-1793
-                      </a>
-                      <p class="header-tel__time">受付時間：平日9:00～17:00</p>
-                    </div>
-                    <a href="<?php echo esc_url(home_url()); ?>/contact/" class="header-contact"><img src="<?php echo get_template_directory_uri(); ?>/images/common/header-mail-icon.svg" alt="" class="" width="20" height="15" loading="lazy">お問い合わせ</a>
+
+                <div class="header-cta">
+                  <div class="header-tel">
+                    <a href="tel:0765-52-1793" class="header-tel__number text-blue mb-0">
+                      <img src="<?php echo get_template_directory_uri(); ?>/images/common/header-phone-icon.svg" alt="" class="" width="15" height="15" loading="lazy">
+                      <p class="header-tel__txt">0765-52-1793</p>
+                    </a>
+                    <p class="header-tel__time">受付時間：平日9:00～17:00</p>
                   </div>
-             
+                  <a href="<?php echo esc_url(home_url()); ?>/contact/" class="header-contact"><img src="<?php echo get_template_directory_uri(); ?>/images/common/header-mail-icon.svg" alt="" class="" width="20" height="15" loading="lazy">お問い合わせ</a>
+                </div>
+
 
               </div>
 

@@ -688,3 +688,4 @@ function my_enqueue_block_editor_assets_quote_style()
   wp_add_inline_script('wp-blocks', $script);
 }
 add_action('enqueue_block_editor_assets', 'my_enqueue_block_editor_assets_quote_style');
+

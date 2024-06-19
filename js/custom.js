@@ -1,3 +1,26 @@
+//投稿詳細ページにもcurrentを付ける
+// 今表示しているURLを取得
+let currentUrl = window.location.href;
+
+// カスタム投稿タイプのURLの共通部分を設定
+const targetUrls = [
+  "https://weble.xsrv.jp/kaizawa-alumi/news/",
+  "https://weble.xsrv.jp/kaizawa-alumi/category/",
+  "https://weble.xsrv.jp/kaizawa-alumi/date/"
+];
+
+// ターゲットになるメニューの指定
+const targetMenu = document.querySelectorAll('.js-add-current');
+
+// 条件に一致したときにメニューに.current-menu-itemを追加
+targetUrls.forEach(url => {
+  if (currentUrl.includes(url)) {
+    targetMenu.forEach(menuItem => {
+      menuItem.classList.add('current-menu-item');
+    });
+  }
+});
+
 //ページトップボタン
 const scroll_to_top_btn = document.getElementById('pagetop-wrap');
 scroll_to_top_btn.addEventListener('click', scroll_to_top);

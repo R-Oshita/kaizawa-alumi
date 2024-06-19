@@ -6,11 +6,7 @@
     background-size: cover;
 }
 
-@supports (background-image: url('../images/company/head-bg-company.webp')) {
-    .company .head-ttl-wrap {
-        background-image: url('../images/company/head-bg-company.webp');
-    }
-}
+
 
 .ttl-pattern_h3 {
     font-size: 1.625rem;
@@ -95,9 +91,11 @@
     .icon-container {
         grid-template-columns: repeat(4, 1fr);
     }
-.icon-card{
-    margin-bottom: 0;
-}
+
+    .icon-card {
+        margin-bottom: 0;
+    }
+
     .icon-card-img {
         margin-bottom: 30px;
     }
@@ -113,8 +111,12 @@
 /* //philosophy */
 
 /* profile */
-.profile {
+.profile.lazyloaded {
     background-image: url(../images/company/profile-bg.jpg);
+}
+
+.profile {
+
     background-size: cover;
     color: #fff;
 }
@@ -144,6 +146,7 @@
     padding-bottom: 20px;
     margin-bottom: 0;
     border-bottom: 1px solid #fff;
+    padding-left: 10px;
 }
 
 @media all and (min-width: 576px) {
@@ -153,6 +156,9 @@
         margin-inline: auto;
     }
 
+    .profile-dl dd{
+        padding-left: 0;
+    }
 }
 
 /* //profile */

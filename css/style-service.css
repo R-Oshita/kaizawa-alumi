@@ -4,11 +4,12 @@
     background-image: url(../images/service/head-bg-service.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 58% 37%;
 }
 
-@supports (background-image: url('../images/service/head-bg-service.webp')) {
+@media all and (min-width: 1400px) {
     .service .head-ttl-wrap {
-        background-image: url('../images/service/head-bg-service.webp');
+        background-position: 0 0;
     }
 }
 
@@ -41,8 +42,9 @@
         gap: 15px;
     }
 }
+
 @media all and (min-width: 768px) {
-    .service-txt{
+    .service-txt {
         text-align: center;
     }
 }
@@ -54,6 +56,16 @@
 
     .icon-card-img {
         margin-bottom: 30px;
+    }
+
+    .icon-card-ttl {
+        font-size: 1.5rem;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .icon-card-ttl {
+        font-size: 1.625rem;
     }
 }
 
@@ -84,8 +96,10 @@
 .products-table td {
     background-color: #fff;
     border: 1px solid #c0c0c0;
+}
 
-
+.products-table th:first-child {
+    border-right: 1px solid #c0c0c0;
 }
 
 .table-blue {

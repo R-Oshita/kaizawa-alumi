@@ -14,7 +14,7 @@ get_header(); ?>
         </div>
         <div class="contact-tel">
           <div class="d-flex">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/contact/tel-icon.svg" alt="" class="contact-tel-icon" width="26" height="26" loading="lazy">
+            <!-- <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/contact/tel-icon.svg" alt="" class="contact-tel-icon" width="26" height="26" loading="lazy"> -->
             <a href="tel:0765-52-1793" class="contact-tel-txt josefin">0765-52-1793</a>
           </div>
           <p class="contact-tel-time">平日 9:00〜17:00</p>
@@ -22,15 +22,15 @@ get_header(); ?>
         <div class="contact-flow d-flex">
           <div class="contact-flow__box">
             <div class="contact-flow__circle josefin circle1">01</div>
-            <p class="contact-flow__txt">入力</p>
+            <p class="contact-flow__txt contact-flow__txt1">入力</p>
           </div>
           <div class="contact-flow__box">
             <div class="contact-flow__circle josefin circle2">02</div>
-            <p class="contact-flow__txt">確認</p>
+            <p class="contact-flow__txt contact-flow__txt2">確認</p>
           </div>
           <div class="contact-flow__box">
             <div class="contact-flow__circle josefin circle3">03</div>
-            <p class="contact-flow__txt">完了</p>
+            <p class="contact-flow__txt contact-flow__txt3">完了</p>
           </div>
         </div>
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -38,7 +38,7 @@ get_header(); ?>
         <?php endwhile;
         endif; ?>
         <p class="contact-txt1">ご入力いただきました個人情報の取扱いに関しては、<br class="d-none d-sm-block">
-          下記「個人情報の取扱いに関する方針」に則り、適切かつ安全に管理いたします。</p>
+          下記「個人情報の取扱いに関する方針」に則り、<br class="d-none d-sm-block d-lg-none">適切かつ安全に管理いたします</p>
 
       </div>
     </div>
@@ -49,8 +49,9 @@ get_header(); ?>
         <h2 class="ttl-pattern_4">個人情報の取扱いに関する方針</h2>
         <dl>
           <dt>個人情報の利用目的</dt>
-          <dd>ご入力いただいた個人情報は、お問合せのために利用いたします。</dd>
-          <dd>ご本人へのご連絡(電話、電子メール、資料送付等)</dd>
+          <dd>ご入力いただいた個人情報は、お問合せのために利用いたします。<br>
+            ご本人へのご連絡(電話、電子メール、資料送付等)
+          </dd>
           <dt>個人情報の第三者提供について</dt>
           <dd>ご本人の同意がある場合または法令に基づく場合を除き、取得した個人情報を第三者に提供することはありません。</dd>
           <dt>個人情報の取扱いの委託について</dt>
