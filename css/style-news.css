@@ -161,6 +161,9 @@
     background-size: contain;
 }
 
+.postlist-line-items .cat-label{
+    min-width: 116px;
+}
 /* 
 .page-numbers.prev::before,
 .page-numbers.next::before {

@@ -405,7 +405,7 @@ header .accordionBtn.chlidnav-opened::after {
 }
 
 .header-contact::before {
-  top: calc(50% - 2px);
+  top: calc(50% - 3px);
   /* 数値は微調整してください */
   transform: rotate(45deg);
   /* 45度回転させる */
@@ -805,6 +805,14 @@ header .accordionBtn.chlidnav-opened::after {
   .header-contact::before,
   .header-contact::after {
     right: 18px;
+  }
+
+  .header-contact::before {
+    top: calc(50% - 3px);
+  }
+
+  .header-contact::after {
+    bottom: calc(50% - 3px);
   }
 }
 

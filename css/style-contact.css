@@ -427,11 +427,10 @@
   font-weight: 500;
   padding: 2px 7px;
   transform: translateY(0px);
-}
-
-.optional .sme-badge {
   border: 1px solid var(--base-blue);
 }
+
+
 
 .search-style>a {
   color: var(--base-blue);
